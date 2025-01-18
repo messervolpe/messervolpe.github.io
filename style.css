@@ -61,7 +61,7 @@ header, main {
 
 /*Archive*/
 
-.month {
+.divider {
     padding: 4px 0;
     margin: 1.5rem 0;
     border-bottom: dashed #353535 1px;
@@ -76,3 +76,12 @@ h3 {
     margin-bottom: 0.5rem;
     color: #acacac;
 }
+
+form {
+
+}
+
+input {
+    height: 40px;
+}
+

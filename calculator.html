@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messer Volpe</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <h1>M</br>v</h1>
+        </a> 
+    </header>
+    <main>
+        <form id="quantity-calculator">
+            <input type="number" id="a" name="a" value="10" /> :
+            <input type="number" id="b" name="b" value="10" />
+            <p>=</p>
+            X : <input type="number" id="c" name="c" value="10" />
+        </form>
+        <h2 class="divider">Result</h2>
+        <output name="result" for="a b c">0</output>
+          
+    </main>
+
+</body>
+
+</html>
+
+
+            
+<script>
+ const form = document.getElementById("quantity-calculator");
+const a = form.elements["a"];
+const b = form.elements["b"];
+const c = form.elements["c"];
+const result = form.elements["result"];
+
+function updateResult() {
+  const aValue = parseInt(a.value);
+  const bValue = parseInt(b.value);
+  const cValue = parseInt(c.value);
+  result.value = aValue*cValue/bValue;
+}
+
+form.addEventListener("input", updateResult);
+
+updateResult();           
+            
+</script>           
+
