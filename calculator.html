@@ -11,11 +11,14 @@
 <body>
     <header>
         <a href="index.html" class="logo">
-            <h1>M</br>v</h1>
-        </a> 
+            <h1>Messer</br>Volpe</h1>
+        </a>
     </header>
     <main>
-        <form id="example-form">
+        <div class="divider">
+            <h2>✦ Quantity Calculator</h2>
+        </div>
+        <form id="quantity-calculator">
             <div class="quant-container">
                 <div class="quant-item">
                     <input class="quant-content" type="number" id="a" name="a" placeholder="Current Quantity" />
@@ -23,16 +26,16 @@
                     <input class="quant-content" type="number" id="b" name="b" placeholder="Current Portions" />
                 </div>
                 <div class="quant-item">
-                    <p class="quant-content quant-x"> X </p>
+                    <div class="quant-content quant-x">
+                        <output name="result" for="a b c">0</output>
+                    </div>
                     <p class="quant-label">: </p>
                     <input class="quant-content" type="number" id="c" name="c" placeholder="New Portions" />
                 </div>
                 
                 
             </div>
-            
-            <h2 class="divider">X Result</h2> 
-            <output name="result" for="a b c">0</output>
+        
           </form>
           
     </main>
@@ -44,7 +47,7 @@
 
             
 <script>
- const form = document.getElementById("example-form");
+ const form = document.getElementById("quantity-calculator");
 const a = form.elements["a"];
 const b = form.elements["b"];
 const c = form.elements["c"];
