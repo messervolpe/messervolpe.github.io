@@ -1,20 +1,148 @@
+/* ------------------- */
+/* Costum properties   */
+/* ------------------- */
 
-/*---------------General------------*/
+:root {
+    /*colors*/
+    --clr-primary: 225, 72.7%, 56.9%;
+    --clr-dark: 219, 22%, 18%;
+    --clr-light: 0, 0%, 98%;
 
-* {
-box-sizing: border-box;
-margin: 0;
+    /*font-size*/
+    --fs-700: 2rem;
+    --fs-600: 1.25rem;
+    --fs-500: 1rem;
+    --fs-400: 0.875rem;
+    
+    
+    /*font-family*/
+    --ff-main: "Fira Code", serif;
+  }
+
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    }
+
+/* Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 
 
+
+/* ------------------- */
+/* Utility Class       */
+/* ------------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem)
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem)
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 50rem;
+}
+
+/* .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line 
+    border: 0;
+
+/* ------------------- */
+/* colors              */
+/* ------------------- */
+
+.bg-primary {background-color: hsl(var(--clr-primary));}
+.bg-dark {background-color: hsl(var(--clr-dark));}
+.bg-light {background-color: hsl(var(--clr-light));}
+
+.text-primary {color: hsl(var(--clr-primary));}
+.text-dark {color: hsl(var(--clr-dark));}
+.text-light {color: hsl(var(--clr-light));}
+
+/* if you need to change the opacity of the colors
+
+.example-component {
+    background-color: hsl( var(--clr-light) / .2 );
+}
+*/
+
+/* ------------------- */
+/* typography          */
+/* ------------------- */
+
+/* .ff-main {font-family: var(--ff-main);}
+
+.fs-700 {font-size: var(--fs-700);}
+.fs-600 {font-size: var(--fs-600);}
+.fs-500 {font-size: var(--fs-500);}
+.fs-400 {font-size: var(--fs-400);} */
+
+
+
+
+
+
+
+/*---------------General------------*/
+
+/*layout*/ 
+
 body {
-    line-height: 1.5;
-    color: #2d2e33;
-    background-color: #f2f1f1;
-    font-family: "Fira Mono", serif;
-    font-size: 1rem;
-
-
+    color: hsl(var(--clr-dark));
+    background-color: hsl(var(--clr-light));
+    font-family: var(--ff-main);
 }
 
 header, main {
@@ -23,49 +151,53 @@ header, main {
     margin: auto;
 }
 
-p {
-    line-height: 1.4rem;
-}
+/*typograpy*/
 
-
-/*---------------LOGO*------------*/
-
-.logo {
-    font-family: "Fira Mono", serif;
-    font-size: 24px;
+h1 {
+    font-size: var(--fs-700);
     font-weight: 700;
-    line-height: 28px;
-    text-align: center;
-    text-decoration: none;
-    color: #4066d9;
+    line-height: 22px;
 }
-
-.logo:hover {
-    color: #2b49a3;
-}
-
-
-/*---------------Headings------------*/
 
 h2 {
-    font-size: 1.25rem;
-    color: #4C4F68;
+    font-size: var(--fs-600);
+    font-weight: 300;
+}
+
+.h2-divider {
+    padding: 4px 0;
+    margin: 16px 0;
+    border-bottom: solid 1px hsl(var(--clr-dark), 0.5);
 }
 
 h3 {
-    font-size: 1rem;
-    color: #657194;
-    padding-bottom: 8px;
+    font-size: var(--fs-400);
+    text-transform: uppercase;
+    font-weight: 500;
+    color: hsl(var(--clr-dark), 0.8);
+}
 
+ul {
+    list-style-type: "- ";
+}
+
+/*logo*/
+
+.logo {
+    text-align: center;
+    text-decoration: none;
+    color: hsl(var(--clr-primary));
+}
+
+.logo:hover {
+    color: hsl(var(--clr-dark), 0.8);
 }
 
 
+/*inputs*/
 
-.divider {
-    padding: 4px 0;
-    margin: 16px 0;
-    border-bottom: dotted #4C4F68 2px;
-}
+
+
 
 
 
@@ -184,18 +316,18 @@ h3 {
 
 input {
     background-color: #f2f1f1;
-    border: #4C4F68 2px solid;
+    border: #4C4F68 1px solid;
 }
 
 
 
 /*---------------prompts------------*/
 
-.promptspage-container {
+/* .promptspage-container {
     
 }
 
 .prompt-container {
  
 
-}
+} */
