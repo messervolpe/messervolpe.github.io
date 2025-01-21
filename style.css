@@ -4,7 +4,7 @@
 
 :root {
     /*colors*/
-    --clr-primary: 225, 72.7%, 56.9%;
+    --clr-primary: 105, 72.7%, 56.9%;
     --clr-dark: 219, 22%, 18%;
     --clr-light: 0, 0%, 98%;
 
@@ -77,16 +77,17 @@ select {
     gap: var(--gap, 1rem)
 }
 
-.grid {
-    display: grid;
-    gap: var(--gap, 1rem)
-}
 
 .container {
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: 50rem;
+    margin-bottom: 1rem;
 }
+
+.container-border {
+    text-align: center;
+    padding: 12px 20px;
+    outline: hsl(var(--clr-primary)) 2px dashed;
+}
+
 
 /* .sr-only {
     position: absolute;
@@ -146,8 +147,8 @@ body {
 }
 
 header, main {
-    padding: 24px;
-    max-width: 800px;
+    padding: 1.5rem;
+    max-width: 50rem;
     margin: auto;
 }
 
@@ -157,6 +158,7 @@ h1 {
     font-size: var(--fs-700);
     font-weight: 700;
     line-height: 22px;
+    margin-bottom: 24px;
 }
 
 h2 {
@@ -166,7 +168,7 @@ h2 {
 
 .h2-divider {
     padding: 4px 0;
-    margin: 16px 0;
+    margin-bottom: 16px;
     border-bottom: solid 1px hsl(var(--clr-dark), 0.5);
 }
 
@@ -175,6 +177,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 500;
     color: hsl(var(--clr-dark), 0.8);
+    margin: 8px 0;
 }
 
 ul {
@@ -194,55 +197,55 @@ ul {
 }
 
 
-/*inputs*/
+/*Interactive Elements*/
 
 
-
-
-
-
-/*---------------Links------------*/
-
-
-.page-link {
+.costum-link {
     display:inline-block;
     height: 44px;
-    padding: 10px 8px 0 8px;
-    color: #2d2e33;
-    text-decoration: #2d2e33 solid underline 2px;
-    text-underline-offset: 8px;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    
-}
-
-
-.page-link:hover,
-.page-link:focus,
-.page-link:active {
-    text-decoration: #4066d9 wavy underline 2px;
+    padding-inline: 8px;
+    color: hsl(var(--clr-dark));
+    text-decoration: hsl(var(--clr-dark)) solid underline 2px;
     text-underline-offset: 8px;
 }
 
-/*---------------Buttons------------*/
+.costum-link:hover,
+.costum-link:focus,
+.costum-link:active {
+    text-decoration: hsl(var(--clr-primary)) wavy underline 2px;
+    text-underline-offset: 8px;
+    outline-offset: 4px;
+}
 
-.primary {
+.btt-primary {
     height: 44px;
-    font-family: "Fira Mono", serif;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: #2d2e33;
-    padding: 0 8px;
+    padding-inline: 8px;
+    color: hsl(var(--clr-dark));
     text-align: center;
-    background-color: #f2f1f1;
-    border: #4066d9 solid 2px;
+    background-color: hsl(var(--clr-light));
+    border: hsl(var(--clr-primary)) solid 2px;
 }
 
-.primary:hover,
-.primary:focus,
-.primary:active {
-    background-color: #4066d9;
-    color: #f2f1f1;
+.btt-primary:hover,
+.btt-primary:focus,
+.btt-primary:active {
+    color: hsl(var(--clr-light));
+    background-color: hsl(var(--clr-primary));
+    outline-offset: 4px;
+}
+
+
+input {
+    height: 44px;
+    padding-inline: 8px;
+    border: hsl(var(--clr-dark)) solid 1px;
+    background-color: #FFF;
+}
+
+input:hover,
+input:focus,
+input:active {
+    outline-offset: 4px;
 }
 
 
@@ -253,19 +256,12 @@ ul {
 
 /*---------------Homepage------------*/
 
-.homepage-container {
-    text-align: center;
-    display: flex;
+.homepage-links {
     flex-direction: column;
-    gap: 8px;
-
+    text-align: center;
 }
 
-/*---------------Archive------------*/
-
-.type {
-    margin-bottom: 1rem;
-}
+/*---------------Stylesheet------------*/
 
 
 /*---------------Calculator------------*/
@@ -296,16 +292,11 @@ ul {
 
 }
 
-.quant-content {
+/* .quant-content {
     height: 50px;
-}
+} */
 
-.quant-x {
-    text-align: center;
-    padding: 12px 20px;
-    border: #4066d9 2px dashed;
 
-}
 .quant-label {
     max-width: 24px;
     text-align: center;
@@ -313,21 +304,3 @@ ul {
 
 }
 
-
-input {
-    background-color: #f2f1f1;
-    border: #4C4F68 1px solid;
-}
-
-
-
-/*---------------prompts------------*/
-
-/* .promptspage-container {
-    
-}
-
-.prompt-container {
- 
-
-} */

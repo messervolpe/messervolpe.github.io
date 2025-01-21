@@ -14,17 +14,19 @@
 </head>
 
 <body>
+
     <header>
         <a href="index.html" class="logo">
             <h1>Messer</br>Volpe</h1>
         </a>
     </header>
+
     <main>
-        <div class="h2-divider">
-            <h2>✦ Quantity Calculator</h2>
-        </div>
-        
+
+        <h2 class="h2-divider">✦ Quantity Calculator</h2>
+
         <form id="quantity-calculator">
+
             <div class="quant-container">
                 <div class="quant-item">
                     <input class="quant-content" type="number" id="a" name="a" placeholder="Current Quantity" />
@@ -32,7 +34,7 @@
                     <input class="quant-content" type="number" id="b" name="b" placeholder="Current Portions" />
                 </div>
                 <div class="quant-item">
-                    <div class="quant-content quant-x">
+                    <div class="quant-content container-border">
                         <output name="result" for="a b c">0</output>
                     </div>
                     <p class="quant-label">: </p>
@@ -46,29 +48,32 @@
           
     </main>
 
+
+    <script>
+        const form = document.getElementById("quantity-calculator");
+       const a = form.elements["a"];
+       const b = form.elements["b"];
+       const c = form.elements["c"];
+       const result = form.elements["result"];
+       
+       function updateResult() {
+         const aValue = parseInt(a.value);
+         const bValue = parseInt(b.value);
+         const cValue = parseInt(c.value);
+         result.value = aValue*cValue/bValue;
+       }
+       
+       form.addEventListener("input", updateResult);
+       
+       updateResult();           
+                   
+       </script>    
+
 </body>
 
 </html>
 
 
             
-<script>
- const form = document.getElementById("quantity-calculator");
-const a = form.elements["a"];
-const b = form.elements["b"];
-const c = form.elements["c"];
-const result = form.elements["result"];
-
-function updateResult() {
-  const aValue = parseInt(a.value);
-  const bValue = parseInt(b.value);
-  const cValue = parseInt(c.value);
-  result.value = aValue*cValue/bValue;
-}
-
-form.addEventListener("input", updateResult);
-
-updateResult();           
-            
-</script>           
+       
 
