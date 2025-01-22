@@ -248,8 +248,7 @@ ul {
 }
 
 .btt-primary:hover,
-.btt-primary:focus,
-.btt-primary:active {
+.btt-primary:focus {
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
     cursor: pointer;
@@ -265,8 +264,7 @@ ul {
 }
 
 .btt-secondary:hover,
-.btt-secondary:focus,
-.btt-secondary:active {
+.btt-secondary:focus {
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
     cursor: pointer;
