@@ -4,9 +4,9 @@
 
 :root {
     /*colors*/
-    --clr-primary: 105, 72.7%, 56.9%;
-    --clr-dark: 219, 22%, 18%;
-    --clr-light: 0, 0%, 98%;
+    --clr-primary: 43, 74.4%, 49%;
+    --clr-dark: 43, 89%, 15%;
+    --clr-light: 40, 100%, 97.1%;
 
     /*font-size*/
     --fs-700: 2rem;
@@ -67,25 +67,73 @@ select {
 }
 
 
-
 /* ------------------- */
 /* Utility Class       */
 /* ------------------- */
 
-.flex {
-    display: flex;
-    gap: var(--gap, 1rem)
+/*Colors*/
+
+.bg-primary {background-color: hsl(var(--clr-primary));}
+.bg-dark {background-color: hsl(var(--clr-dark));}
+.bg-light {background-color: hsl(var(--clr-light));}
+
+.txt-primary {color: hsl(var(--clr-primary));}
+.txt-dark {color: hsl(var(--clr-dark));}
+.txt-light {color: hsl(var(--clr-light));}
+
+
+/*Typography*/
+
+.txt-center {
+    text-align: center;
 }
 
 
-.container {
+/*Spacing*/
+
+.stack-xl > *:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.stack-l > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.stack-m> *:not(:last-child) {
     margin-bottom: 1rem;
 }
 
+.stack-s > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+
+
+/*Layout*/
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1rem)
+}
+
+.flex-item-container {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    align-content: center;
+
+}
+
+.full-width {
+    width: 100%;
+}
+
+
 .container-border {
-    text-align: center;
-    padding: 12px 20px;
-    outline: hsl(var(--clr-primary)) 2px dashed;
+    padding-inline: 8px;
+    border: hsl(var(--clr-primary)) 2px dashed;
+    width: 100%;
 }
 
 
@@ -100,43 +148,11 @@ select {
     white-space: nowrap; /* added line 
     border: 0;
 
-/* ------------------- */
-/* colors              */
-/* ------------------- */
 
-.bg-primary {background-color: hsl(var(--clr-primary));}
-.bg-dark {background-color: hsl(var(--clr-dark));}
-.bg-light {background-color: hsl(var(--clr-light));}
-
-.text-primary {color: hsl(var(--clr-primary));}
-.text-dark {color: hsl(var(--clr-dark));}
-.text-light {color: hsl(var(--clr-light));}
-
-/* if you need to change the opacity of the colors
-
-.example-component {
-    background-color: hsl( var(--clr-light) / .2 );
-}
-*/
 
 /* ------------------- */
-/* typography          */
+/* General             */
 /* ------------------- */
-
-/* .ff-main {font-family: var(--ff-main);}
-
-.fs-700 {font-size: var(--fs-700);}
-.fs-600 {font-size: var(--fs-600);}
-.fs-500 {font-size: var(--fs-500);}
-.fs-400 {font-size: var(--fs-400);} */
-
-
-
-
-
-
-
-/*---------------General------------*/
 
 /*layout*/ 
 
@@ -158,18 +174,16 @@ h1 {
     font-size: var(--fs-700);
     font-weight: 700;
     line-height: 22px;
-    margin-bottom: 24px;
 }
 
 h2 {
     font-size: var(--fs-600);
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .h2-divider {
     padding: 4px 0;
-    margin-bottom: 16px;
-    border-bottom: solid 1px hsl(var(--clr-dark), 0.5);
+    border-bottom: dashed 2px hsl(var(--clr-dark), 0.5);
 }
 
 h3 {
@@ -177,7 +191,6 @@ h3 {
     text-transform: uppercase;
     font-weight: 500;
     color: hsl(var(--clr-dark), 0.8);
-    margin: 8px 0;
 }
 
 ul {
@@ -199,7 +212,6 @@ ul {
 
 /*Interactive Elements*/
 
-
 .costum-link {
     display:inline-block;
     height: 44px;
@@ -209,11 +221,15 @@ ul {
     text-underline-offset: 8px;
 }
 
-.costum-link:hover,
-.costum-link:focus,
-.costum-link:active {
+.costum-link:hover {
     text-decoration: hsl(var(--clr-primary)) wavy underline 2px;
     text-underline-offset: 8px;
+}
+
+.costum-link:focus {
+    text-decoration: hsl(var(--clr-primary)) wavy underline 2px;
+    text-underline-offset: 8px;
+    /* outline: 2px solid hsl(var(--clr-dark)); */
     outline-offset: 4px;
 }
 
@@ -222,17 +238,20 @@ ul {
     padding-inline: 8px;
     color: hsl(var(--clr-dark));
     text-align: center;
-    background-color: hsl(var(--clr-light));
-    border: hsl(var(--clr-primary)) solid 2px;
+    background-color: hsl(var(--clr-primary));
+    border: 2px solid hsl(var(--clr-primary));
 }
 
 .btt-primary:hover,
 .btt-primary:focus,
 .btt-primary:active {
-    color: hsl(var(--clr-light));
-    background-color: hsl(var(--clr-primary));
+    outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
+    cursor: pointer;
 }
+
+
+/*-------mouse click icon ???? ---------*/
 
 
 input {
@@ -245,6 +264,7 @@ input {
 input:hover,
 input:focus,
 input:active {
+    outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
 }
 
@@ -257,50 +277,27 @@ input:active {
 /*---------------Homepage------------*/
 
 .homepage-links {
+    display: flex;
     flex-direction: column;
-    text-align: center;
 }
-
-/*---------------Stylesheet------------*/
 
 
 /*---------------Calculator------------*/
 
-
-.quant-container {
+.quant-align {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 24px;
-    padding: 16px 0;
-}
-
-.quant-item {
-    flex: 1;
-    min-width: 350px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-
+    justify-content: center;
 }
 
-
-.quant-content, .quant-label {
-    flex: 1;
-    width: 100%;
-    padding: 12px 20px;
-
-}
-
-/* .quant-content {
-    height: 50px;
-} */
-
-
-.quant-label {
+.quant-sign {
     max-width: 24px;
-    text-align: center;
     padding: 4px;
-
 }
 
+/*--------------prompts------------*/
+
+.prompt {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}

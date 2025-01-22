@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Messer Volpe</title>
+    <title>Quantity calculator</title>
 
     <!-- style -->
     <link href="style.css" rel="stylesheet">
@@ -15,30 +15,31 @@
 
 <body>
 
-    <header>
+    <header >
         <a href="index.html" class="logo">
             <h1>Messer</br>Volpe</h1>
         </a>
     </header>
 
-    <main>
+    <main class="container-centered stack-l">
 
         <h2 class="h2-divider">✦ Quantity Calculator</h2>
 
         <form id="quantity-calculator">
 
-            <div class="quant-container">
-                <div class="quant-item">
-                    <input class="quant-content" type="number" id="a" name="a" placeholder="Current Quantity" />
-                    <p class="quant-label">:</p>
-                    <input class="quant-content" type="number" id="b" name="b" placeholder="Current Portions" />
+            <div class="flex">
+
+                <div class=" flex-item-container ">
+                    <input class="full-width" type="number" id="a" name="a" placeholder="Current Quantity" />
+                    <p class="quant-sign quant-align">:</p>
+                    <input class="full-width" type="number" id="b" name="b" placeholder="Current Portions" />
                 </div>
-                <div class="quant-item">
-                    <div class="quant-content container-border">
+                <div class=" flex-item-container ">
+                    <div class="container-border quant-align">
                         <output name="result" for="a b c">0</output>
                     </div>
-                    <p class="quant-label">: </p>
-                    <input class="quant-content" type="number" id="c" name="c" placeholder="New Portions" />
+                    <p class="quant-sign quant-align">:</p>
+                    <input class="full-width" type="number" id="c" name="c" placeholder="New Portions" />
                 </div>
                 
                 
