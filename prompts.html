@@ -2,9 +2,6 @@
 <html>
 <head>
     <title>Prompts generator</title>
-    <script type="module" src="prompt-generator.js"></script>
-
-
     <!-- style -->
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width", initial-scale="1", minimum-scale="1">
@@ -53,10 +50,18 @@
                           00
                         </span>
                     </div>
+                    
                     <div class="time-buttons flex-item-container timer">
-                        <button class="btn btn-lg btn-success btt-primary full-width" data-action="start">Start</button>
-                        <button class="btn btn-lg btn-danger btt-secondary full-width" data-action="stop">Stop</button>
-                        <button class="btn btn-lg btn-link btn-block btt-secondary full-width" data-action="reset">Reset</button>
+
+                      <select name="time" id="time-select" autocomplete="off">
+                        <option value="300">5 Minutes</option>
+                        <option value="180">3 Minutes</option>
+                        <option value="60">1 Minute</option>
+                      </select>
+                      
+                      <button class="btt-primary full-width" data-action="start">Start</button>
+                      <button hidden class="btt-primary full-width" data-action="stop">Stop</button>
+                      <button class="btt-secondary full-width" data-action="reset">Reset</button>
                     </div>  
                 
                 </div>
@@ -88,59 +93,79 @@
     button.addEventListener("click", GetPrompt)
 
 
-    //timer
-    const btnStartElement = document.querySelector('[data-action="start"]');
-    const btnStopElement = document.querySelector('[data-action="stop"]');
-    const btnResetElement = document.querySelector('[data-action="reset"]');
+    //timer 
 
     const minutes = document.querySelector('.minutes');
     const seconds = document.querySelector('.seconds');
-    let timerTime = 300;
+
+    const bttStart = document.querySelector('[data-action="start"]');
+    const bttStop = document.querySelector('[data-action="stop"]');
+    const bttReset = document.querySelector('[data-action="reset"]');
+    
+
+    let TimerTime = document.getElementById("time-select").value;
     let interval;
 
+    function NewTimer() {
+      TimerTime = document.getElementById("time-select").value;
+      isRunning = false;
+      clearInterval(interval);
+      minutes.innerText = Math.floor(TimerTime / 60);
+      seconds.innerText = "00";
+      bttStop.hidden = true;
+      bttStart.hidden = false;
+      
+    }
+
+    const TimeSelect = document.getElementById("time-select");
+    TimeSelect.addEventListener("change", newTime = () => {
+      NewTimer();})
 
     const start = () => {
       isRunning = true;
       interval = setInterval(decrementTimer, 1000)
+      bttStart.hidden = true;
+      bttStop.hidden = false;
       }
-
+    
     const stop = () => {
-      isRunning = false;
-      clearInterval(interval);
+    isRunning = false;
+    clearInterval(interval);
+    bttStart.hidden = false;
+    bttStop.hidden = true;
     }
 
-    const reset = () => {
-      minutes.innerText = '05';
-      seconds.innerText = '00';
-      timerTime = 300;
-      isRunning = false;
-      clearInterval(interval);
-    }
 
     const pad = (number) => {
       return (number < 10) ? '0' + number : number;
     }
 
     const decrementTimer = () => {
-      timerTime--;
+      TimerTime--;
   
-    const numberMinutes = Math.floor(timerTime / 60);
-    const numberSeconds = timerTime % 60;
+      const numberMinutes = Math.floor(TimerTime / 60);
+      const numberSeconds = TimerTime % 60;
   
       minutes.innerText = pad(numberMinutes);
       seconds.innerText = pad(numberSeconds);
+
+      if (TimerTime == 0) {
+        isRunning = false;
+        clearInterval(interval)
+      }
+
     }
 
-    btnStartElement.addEventListener('click', startTimer = () => {
+    bttStart.addEventListener('click', startTimer = () => {
       start();
     });
 
-    btnStopElement.addEventListener('click', stopTimer = () => {
+    bttStop.addEventListener('click', stopTimer = () => {
       stop();
     });
 
-    btnResetElement.addEventListener('click', stopTimer = () => {
-      reset();
+    bttReset.addEventListener('click', stopTimer = () => {
+      NewTimer();
     });
 
     </script>

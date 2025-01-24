@@ -254,6 +254,7 @@ ul {
     cursor: pointer;
 }
 
+
 .btt-secondary {
     height: 44px;
     padding-inline: 8px;
@@ -270,10 +271,9 @@ ul {
     cursor: pointer;
 }
 
-/*-------mouse click icon ???? ---------*/
 
-
-input {
+input,
+select {
     height: 44px;
     padding-inline: 8px;
     border: hsl(var(--clr-dark)) solid 1px;
@@ -281,9 +281,16 @@ input {
 }
 
 input:hover,
-input:focus {
+input:focus,
+select:hover,
+select:focus {
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
+}
+
+option {
+    font-family: monospace;
+    font-size: 16px;
 }
 
 
@@ -326,5 +333,5 @@ input:focus {
 }
 
 .time-buttons {
-    gap: 16px;
+    gap:16px;
 }
