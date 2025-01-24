@@ -112,21 +112,55 @@ select {
     margin-bottom: 0.5rem;
 }
 
+.gap-xl {
+    gap: 2rem;
+}
+
+.gap-l {
+    gap: 1.5rem;
+}
+
+.gap-m {
+    gap: 1rem;
+}
+
+.gap-s {
+    gap: 0.5rem;
+}
+
 
 
 /*Layout*/
 
 .flex {
     display: flex;
-    flex-wrap: wrap;
     gap: var(--gap, 1rem)
 }
 
-.flex-item-container {
-    flex: 1;
-    min-width: 350px;
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-a-center {
+    align-items: center;
+}
+
+.flex-j-center {
+    justify-content: center;
+}
+
+
+.flex-up-2 {
     display: flex;
     align-content: center;
+    flex: 1;
+    min-width: 350px;
+    
 
 }
 
@@ -162,10 +196,20 @@ select {
 /*layout*/ 
 
 body {
-    color: hsl(var(--clr-dark));
-    background-color: hsl(var(--clr-light));
     font-family: var(--ff-main);
+    color: hsl(var(--clr-dark));
+
+    background-color: hsl(var(--clr-light));
+    background-size: 32px 32px;
+
+    background-image: radial-gradient(circle, hsl(var(--clr-dark), 0.2) 1px, rgba(0, 0, 0, 0) 1px);
+
+    /* background-image:
+        linear-gradient(to right, hsl(var(--clr-dark), 0.1) 0.5px, transparent 0.5px)
+        linear-gradient(to bottom, hsl(var(--clr-dark), 0.1) 0.5px, transparent 0.5px); */
 }
+
+    
 
 header, main {
     padding: 1.5rem;
@@ -234,7 +278,7 @@ ul {
 .costum-link:focus {
     text-decoration: hsl(var(--clr-primary)) wavy underline 2px;
     text-underline-offset: 8px;
-    /* outline: 2px solid hsl(var(--clr-dark)); */
+    outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
 }
 
@@ -265,7 +309,9 @@ ul {
 }
 
 .btt-secondary:hover,
-.btt-secondary:focus {
+.btt-secondary:focus,
+select:hover,
+select:focus {
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
     cursor: pointer;
@@ -281,9 +327,7 @@ select {
 }
 
 input:hover,
-input:focus,
-select:hover,
-select:focus {
+input:focus {
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
 }
@@ -299,12 +343,6 @@ option {
 /*---------------Pages--------------*/
 /*----------------------------------*/
 
-/*---------------Homepage------------*/
-
-.homepage-links {
-    display: flex;
-    flex-direction: column;
-}
 
 
 /*---------------Calculator------------*/
@@ -325,13 +363,4 @@ option {
 .prompt {
     padding-top: 24px;
     padding-bottom: 24px;
-}
-
-.timer {
-    --gap: 24px;
-    justify-content: center;
-}
-
-.time-buttons {
-    gap:16px;
 }
