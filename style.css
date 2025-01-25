@@ -134,7 +134,7 @@ select {
 
 .flex {
     display: flex;
-    gap: var(--gap, 1rem)
+    /* gap: var(--gap, 1rem); */
 }
 
 .flex-wrap {
@@ -154,14 +154,13 @@ select {
     justify-content: center;
 }
 
+.flex-grow {
+    flex-grow: 2;
+}
 
 .flex-up-2 {
-    display: flex;
-    align-content: center;
-    flex: 1;
     min-width: 350px;
-    
-
+    flex: 1;
 }
 
 .full-width {
@@ -169,25 +168,26 @@ select {
 }
 
 
+
 .container-border {
-    padding-inline: 8px;
+    padding: 8px;
     border: hsl(var(--clr-primary)) 2px dashed;
     width: 100%;
+    align-content: center;
 }
 
 
-/* .sr-only {
-    position: absolute;
+.sr-only {
+    position: absolute; 
     width: 1px;
     height: 1px;
     padding: 0;
-    margin: -1px;
+    margin: -1px; 
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
-    white-space: nowrap; /* added line 
+    white-space: nowrap; /* added line */
     border: 0;
-
-
+  }
 
 /* ------------------- */
 /* General             */
@@ -228,6 +228,7 @@ h1 {
 h2 {
     font-size: var(--fs-600);
     font-weight: 400;
+    
 }
 
 .h2-divider {
@@ -346,6 +347,11 @@ option {
 
 
 /*---------------Calculator------------*/
+
+.quant-container {
+    display: flex;
+    align-content: center;
+}
 
 .quant-align {
     display: flex;

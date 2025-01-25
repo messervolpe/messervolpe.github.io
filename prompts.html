@@ -1,75 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Prompts generator</title>
+    <title>Monthly Archives</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- style -->
     <link href="style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
+    
     
     <!-- font links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    
-    <header >
-        <a href="index.html" class="logo">
-            <h1>Messer</br>Volpe</h1>
-        </a> 
-    </header>
 
-    <main >
+  <header >
+    <a href="index.html" class="logo">
+        <h1>Messer<br>Volpe</h1>
+    </a>
+  </header>
 
-        <div class="stack-xl">
+  <main class="stack-xl">
+    <h2 class="h2-divider">Prompts generator</h2>
 
-            <div class="stack-m">
-                <h3>/ Prompts</h3>
-            <div class="flex flex-wrap">
-                <div class="flex-up-2">
-                    <p id="prompt-1" class="prompt txt-center container-border">prompt 1</p>
-                </div>
-                <div class="flex-up-2">
-                    <p id="prompt-2" class="prompt txt-center container-border">prompt 2</p>
-                </div>
-            </div>
-            <button data-action="GeneratePrompts" class="btt-primary full-width"> New prompts !</button>
-            </div>  
+    <div class="flex flex-wrap gap-xl">
 
-            <div class="stack-s">
-                <h3>/ Timer</h3>
-
-                <div class="flex flex-wrap flex-v-center">
-                    <div class="fs-700 flex-up-2 flex-j-center">
-                        <span class="minutes">
-                          05
-                        </span>
-                        :
-                        <span class="seconds">
-                          00
-                        </span>
-                    </div>
-                    
-                    <div class="flex-up-2 gap-m">
-
-                      <select id="time-select" autocomplete="off">
-                        <option value="300">5 Minutes</option>
-                        <option value="180">3 Minutes</option>
-                        <option value="60">1 Minute</option>
-                      </select>
-
-                      <button class="btt-primary full-width" data-action="start-stop">Start</button>
-                      <button class="btt-secondary full-width" data-action="reset">Reset</button>
-                    </div>  
-                
-                </div>
-
-            </div>
-        
+      <section class="flex-up-2 stack-m">
+        <h3>/ Prompts</h3>
+        <div class="container-border txt-center">
+          <span id="prompt-1"> Prompt 1 </span>
+          +
+          <span id="prompt-2"> Prompt 2 </span>
         </div>
+        <button data-action="GeneratePrompts" class="btt-primary full-width"> New prompts !</button>
+      </section>  
 
-    </main>
+      <section class="flex-up-2 flex-column gap-m">
+        <h3>/ Timer</h3>
+        <div class="container-border txt-center flex-grow">
+          <span class="minutes"> 05 </span>
+          :
+          <span class="seconds"> 00 </span>
+        </div>
+        <div class="flex gap-m">
+          <select id="time-select" autocomplete="off">
+            <option value="300">5 Minutes</option>
+            <option value="180">3 Minutes</option>
+            <option value="60">1 Minute</option>
+          </select>
+          <button class="btt-primary full-width" data-action="start-stop">Start</button>
+          <button class="btt-secondary full-width" data-action="reset">Reset</button>
+
+        </div>
+        
+      </section>
+
+    </div>
+
+  </main>
 
     <script>  
 
@@ -77,17 +65,21 @@
     /* PROMPTS             */
     /* ------------------- */
 
-    const prompt_one = new Array ("is anxious", "is serene","is excited", "is depressed", "is hopeful", "is nostalgic", "is angry", "is silly", "is young", "is old", "is curious", "is frustrated", "is inspired", "is lonely", "is romantic", "is chaotic",  "is whimsical", "is tall", "is short", "is thin", "is muscular", "is chubby", "is tiny", "is massive", "is delicate", "has shadows", "is glowing", "is transparent", "has tentacles", "has texture", "is transparent",  "is rough", "is smooth", "is angular", "is luminous", "is fragile", "is elastic", "is asymmetrical", "is complex", "is minimal", "is intricate", "is sharp", "is fluid", "is rigid", "is dynamic", "is static", "is textured", "is polished", "is chaotic", "is symmetrical", "is liquid", "is solid", "is microscopic", "is a tree", "is a flower", "is a mountain", "is a river", "is a cloud", "is a seed", "is a leaf", "is a stone", "is a wave", "is a root", "is a forest", "is a meadow", "is a waterfall", "is a canyon", "is a valley", "is a desert", "is a glacier", "is a volcano", "is a stream", "is a breeze", "is a sunrise", "is a sunset", "is a storm", "is a lightning", "is a snowflake", "is a raindrop", "is a moss", "is a petal", "is a branch", "is a grass", "is a cliff", "is a cave", "is a horizon", "is a tide", "is a star", "is a planet", "is a rock", "is a wind", "is a soil", "is a dew", "is a frost", "is a island", "is a ocean", "is a jungle", "is a landscape", "is a wild", "is a moonlight", "is a sunlight", "is a fox", "is a rabbit", "is a frog", "is a fish");
+    const prompt_one = new Array ("is old", "is young", "is tall", "is short", "is thin", "is chubby", "is muscular", "is tiny", "is massive", "is anxious", "is afraid", "is serene", "is excited", "is depressed", "is hopeful", "is nostalgic", "is angry", "is silly", "is determined", "is curious", "is frustrated", "is inspired", "is lonely", "is messy", "is tidy", "is colorful", "is minimal", "is complex", "is elastic", "is transparent", "is smooth", "is angular", "is luminous", "is fragile", "is asymmetrical", "is glowing", "is sharp", "is fluid", "is rigid", "is dynamic", "is static", "is polished", "is symmetrical", "is liquid", "is solid", "is microscopic", "has a hat", "has a bag", "has a backpack", "has a jacket", "has a scarf", "has a necklace", "has a earring", "has a mug", "has a umbrella", "has a knife", "has a box", "has a crown", "has a binoculars", "has a shadow", "has roots", "has leaves", "has a flower", "has a house", "has a pencil", "has a book", "has a phone", "has a chair", "has a key", "has a shoe","is a tree", "is a mountain", "is a river", "is a cloud", "is a seed", "is a stone", "is a wave", "is a forest", "is a fox", "is a rabbit", "is a frog", "is a toad", "is a cat", "is a dog", "is a bird", "is a fish", "is a mushroom", "is a volcano", "is a canyon", "is a valley", "is a desert", "is a meadow", "is a waterfall", "is a glacier", "is a snowflake", "is a raindrop", "is a moss", "is a petal", "is a sunrise", "is a sunset", "is a storm", "is a lightning", "is a stream", "is a breeze", "is a grass", "is a cliff", "is a cave", "is a island", "is a ocean", "is a jungle", "is a landscape", "is wild", "is in the moonlight", "is in the sunlight", "is a star", "is a planet", "is a rock", "is a wind", "is the soil", "is dancing", "is walking", "is sleeping", "is eating", "is drinking", "is running", "is jumping", "is sitting", "is standing", "is upside down", "is floating", "is spinning", "is singing", "is writing", "is reading", "is typing", "is blushing", "is cooking", "is cleaning", "is washing", "is brushing", "is driving", "is riding", "is swimming", "is playing", "is laughing", "is crying", "is talking", "is listening", "is working", "is studying", "is learning", "is teaching", "is shopping", "is waiting", "is thinking", "is dreaming", "is smiling", "is hugging", "is kissing", "is painting", "is drawing", "is gardening", "is cycling", "is climbing", "is hiking", "is skating", "is skiing", "is showering", "is stretching", "is yawning", "is sneezing", "is breathing", "is a fisherman", "is a witch", "is a woodcutter", "is a sailor", "is a knight", "is a farmer", "is a shepherd", "is a blacksmith", "is a baker", "is a hunter", "is a gardener", "is a miner", "is a weaver", "is a potter", "is a carpenter", "is a merchant", "is a healer", "is a storyteller", "is a warrior", "is a wizard", "is a ranger", "is a druid", "is a scholar", "is a musician", "is a dancer", "is a painter", "is a sculptor", "is a poet", "is a traveler", "is a explorer", "is a guide", "is a teacher", "is a blob", "is a apprentice", "is a sage", "is a monk", "is a priest", "is a alchemist", "is a astronomer", "is a cartographer", "is a navigator", "is a architect", "is a jeweler", "is a tailor", "is a herbalist", "is a midwife", "is a messenger", "is a guardian", "is a diplomat", "is a adventurer", "is a mystic");
 
-    const prompt_two = new Array ("is dancing", "is walking", "is sleeping", "is eating", "is drinking", "is running", "is jumping", "is sitting", "is standing", "is upside down", "is floating", "is spinning", "is singing", "is writing", "is reading", "is typing", "is blushing", "is cooking", "is cleaning", "is washing", "is brushing", "is combing", "is driving", "is riding", "is swimming", "is playing", "is laughing", "is crying", "is talking", "is listening", "is working", "is studying", "is learning", "is teaching", "is shopping", "is waiting", "is thinking", "is dreaming", "is smiling", "is hugging", "is kissing", "is painting", "is drawing", "is gardening", "is cycling", "is climbing", "is hiking", "is skating", "is skiing", "is showering", "is stretching", "is yawning", "is sneezing", "is breathing", "has a shadow", "has a root", "has a leaf", "has a flower", "has a house", "has a pencil", "has a book", "has a phone", "has a cup", "has a chair", "has a key", "has a shoe", "has a hat", "has a bag", "has a watch", "has a backpack", "has a jacket", "has a scarf", "has a ring", "has a necklace", "has a earring", "has a mug", "has a umbrella", "has a knife", "has a box", "is anxious", "is serene","is excited", "is depressed", "is hopeful", "is nostalgic", "is angry", "is silly", "is young", "is old", "is curious", "is frustrated", "is inspired", "is lonely", "is romantic", "is chaotic");
+    const prompt_two = new Array ("is old", "is young", "is tall", "is short", "is thin", "is chubby", "is muscular", "is tiny", "is massive", "is anxious", "is afraid", "is serene", "is excited", "is depressed", "is hopeful", "is nostalgic", "is angry", "is silly", "is determined", "is curious", "is frustrated", "is inspired", "is lonely", "is messy", "is tidy", "is colorful", "is minimal", "is complex", "is elastic", "is transparent", "is smooth", "is angular", "is luminous", "is fragile", "is asymmetrical", "is glowing", "is sharp", "is fluid", "is rigid", "is dynamic", "is static", "is polished", "is symmetrical", "is liquid", "is solid", "is microscopic", "has a hat", "has a bag", "has a backpack", "has a jacket", "has a scarf", "has a necklace", "has a earring", "has a mug", "has a umbrella", "has a knife", "has a box", "has a crown", "has a binoculars", "has a shadow", "has roots", "has leaves", "has a flower", "has a house", "has a pencil", "has a book", "has a phone", "has a chair", "has a key", "has a shoe","is a tree", "is a mountain", "is a river", "is a cloud", "is a seed", "is a stone", "is a wave", "is a forest", "is a fox", "is a rabbit", "is a frog", "is a toad", "is a cat", "is a dog", "is a bird", "is a fish", "is a mushroom", "is a volcano", "is a canyon", "is a valley", "is a desert", "is a meadow", "is a waterfall", "is a glacier", "is a snowflake", "is a raindrop", "is a moss", "is a petal", "is a sunrise", "is a sunset", "is a storm", "is a lightning", "is a stream", "is a breeze", "is a grass", "is a cliff", "is a cave", "is a island", "is a ocean", "is a jungle", "is a landscape", "is wild", "is in the moonlight", "is in the sunlight", "is a star", "is a planet", "is a rock", "is a wind", "is the soil", "is dancing", "is walking", "is sleeping", "is eating", "is drinking", "is running", "is jumping", "is sitting", "is standing", "is upside down", "is floating", "is spinning", "is singing", "is writing", "is reading", "is typing", "is blushing", "is cooking", "is cleaning", "is washing", "is brushing", "is driving", "is riding", "is swimming", "is playing", "is laughing", "is crying", "is talking", "is listening", "is working", "is studying", "is learning", "is teaching", "is shopping", "is waiting", "is thinking", "is dreaming", "is smiling", "is hugging", "is kissing", "is painting", "is drawing", "is gardening", "is cycling", "is climbing", "is hiking", "is skating", "is skiing", "is showering", "is stretching", "is yawning", "is sneezing", "is breathing", "is a fisherman", "is a witch", "is a woodcutter", "is a sailor", "is a knight", "is a farmer", "is a shepherd", "is a blacksmith", "is a baker", "is a hunter", "is a gardener", "is a miner", "is a weaver", "is a potter", "is a carpenter", "is a merchant", "is a healer", "is a storyteller", "is a warrior", "is a wizard", "is a ranger", "is a druid", "is a scholar", "is a musician", "is a dancer", "is a painter", "is a sculptor", "is a poet", "is a traveler", "is a explorer", "is a guide", "is a teacher", "is a blob", "is a apprentice", "is a sage", "is a monk", "is a priest", "is a alchemist", "is a astronomer", "is a cartographer", "is a navigator", "is a architect", "is a jeweler", "is a tailor", "is a herbalist", "is a midwife", "is a messenger", "is a guardian", "is a diplomat", "is a adventurer", "is a mystic");
 
     function GetPrompts()
     {
         const prompt1 = prompt_one[Math.floor(Math.random() * prompt_one.length)];
-        document.getElementById("prompt-1").innerHTML=prompt1;
-
         const prompt2 = prompt_two[Math.floor(Math.random() * prompt_two.length)];
-        document.getElementById("prompt-2").innerHTML=prompt2;
+
+        if (prompt1 === prompt2) {
+          const prompt2 = prompt_two[Math.floor(Math.random() * prompt_two.length)];
+        } else {
+          document.getElementById("prompt-1").innerHTML=prompt1;
+          document.getElementById("prompt-2").innerHTML=prompt2;
+        }
     };
     
     const bttPrompts = document.querySelector('[data-action="GeneratePrompts"]');

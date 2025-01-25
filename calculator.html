@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Quantity calculator</title>
+    <title>Monthly Archives</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- style -->
     <link href="style.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width", initial-scale="1">
+    
     
     <!-- font links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,58 +16,53 @@
 
     <header >
         <a href="index.html" class="logo">
-            <h1>Messer</br>Volpe</h1>
+            <h1>Messer<br>Volpe</h1>
         </a>
     </header>
 
     <main class="container-centered stack-l">
 
-        <h2 class="h2-divider">✦ Quantity Calculator</h2>
+        <h2 class="h2-divider">Quantity Calculator</h2>
 
-        <form id="quantity-calculator">
+        <form id="quantity-calculator" class="flex flex-wrap gap-m">
 
-            <div class="flex flex-wrap">
-
-                <div class=" flex-up-2 ">
-                    <input class="full-width" type="number" id="a" name="a" placeholder="Current Quantity" />
-                    <p class="quant-sign quant-align">:</p>
-                    <input class="full-width" type="number" id="b" name="b" placeholder="Current Portions" />
+            <section class=" flex-up-2 quant-container">
+                <input class="full-width" type="number" id="a" name="a" placeholder="Current Quantity">
+                <p class="quant-sign quant-align">:</p>
+                <input class="full-width" type="number" id="b" name="b" placeholder="Current Portions">
+            </section>
+            <section class=" flex-up-2 quant-container">
+                <div class="container-border quant-align">
+                    <output name="result" for="a b c">0</output>
                 </div>
-                <div class=" flex-up-2 ">
-                    <div class="container-border quant-align">
-                        <output name="result" for="a b c">0</output>
-                    </div>
-                    <p class="quant-sign quant-align">:</p>
-                    <input class="full-width" type="number" id="c" name="c" placeholder="New Portions" />
-                </div>
-                
-                
-            </div>
+                <p class="quant-sign quant-align">:</p>
+                <input class="full-width" type="number" id="c" name="c" placeholder="New Portions">
+            </section>
         
-          </form>
-          
+        </form>
+        
     </main>
 
 
     <script>
-        const form = document.getElementById("quantity-calculator");
-       const a = form.elements["a"];
-       const b = form.elements["b"];
-       const c = form.elements["c"];
-       const result = form.elements["result"];
-       
-       function updateResult() {
-         const aValue = parseInt(a.value);
-         const bValue = parseInt(b.value);
-         const cValue = parseInt(c.value);
-         result.value = aValue*cValue/bValue;
-       }
-       
-       form.addEventListener("input", updateResult);
-       
-       updateResult();           
-                   
-       </script>    
+    const form = document.getElementById("quantity-calculator");
+    const a = form.elements["a"];
+    const b = form.elements["b"];
+    const c = form.elements["c"];
+    const result = form.elements["result"];
+    
+    function updateResult() {
+        const aValue = parseInt(a.value);
+        const bValue = parseInt(b.value);
+        const cValue = parseInt(c.value);
+        result.value = aValue*cValue/bValue;
+    }
+    
+    form.addEventListener("input", updateResult);
+    
+    updateResult();           
+                
+    </script>    
 
 </body>
 
