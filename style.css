@@ -4,17 +4,17 @@
 
 :root {
     /*colors*/
-    --clr-primary: 43, 74.4%, 49%;
-    --clr-dark: 43, 89%, 15%;
-    --clr-light: 40, 100%, 97.1%;
+    --clr-primary: 91, 73%, 44%;
+    --clr-dark: 55, 4%, 25%;
+    --clr-light: 65, 17%, 95%;
 
     /*font-size*/
     --fs-700: 2rem;
     --fs-600: 1.25rem;
     --fs-500: 1rem;
     --fs-400: 0.875rem;
-    
-    
+
+
     /*font-family*/
     --ff-main: "Fira Code", serif;
   }
@@ -178,11 +178,11 @@ select {
 
 
 .sr-only {
-    position: absolute; 
+    position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
-    margin: -1px; 
+    margin: -1px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
@@ -193,7 +193,7 @@ select {
 /* General             */
 /* ------------------- */
 
-/*layout*/ 
+/*layout*/
 
 body {
     font-family: var(--ff-main);
@@ -209,7 +209,7 @@ body {
         linear-gradient(to bottom, hsl(var(--clr-dark), 0.1) 0.5px, transparent 0.5px); */
 }
 
-    
+
 
 header, main {
     padding: 1.5rem;
@@ -228,7 +228,7 @@ h1 {
 h2 {
     font-size: var(--fs-600);
     font-weight: 400;
-    
+
 }
 
 .h2-divider {
@@ -370,3 +370,5 @@ option {
     padding-top: 24px;
     padding-bottom: 24px;
 }
+
+
