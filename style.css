@@ -277,9 +277,9 @@ summary:hover {
 
 
 .c-btt--primary:hover,
-.c-btt--primary:focus,
+.c-btt--primary:focus-visible,
 .c-btt--secondary:hover,
-.c-btt--secondary:focus {
+.c-btt--secondary:focus-visible {
     cursor: pointer;
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
@@ -296,8 +296,7 @@ summary:hover {
     text-underline-offset: 8px;
 }
 
-.c-link:hover,
-.c-link:focus {
+.c-link:hover {
     text-decoration: hsl(var(--clr-accent-1)) wavy underline 2px;
     text-underline-offset: 8px;
     
@@ -319,9 +318,11 @@ select {
 }
 
 select:hover,
-select:focus,
+select:focus-visible ,
 input:hover,
-input:focus {
+input:focus-visible,
+.c-link:focus-visible,
+.logo:focus-visible {
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
 }
