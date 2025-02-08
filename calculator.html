@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Monthly Archives</title>
+    <title>Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- style -->
@@ -12,40 +12,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="l-stack--xl">
 
-    <header >
-        <a href="index.html" class="logo">
-            <h1>Messer<br>Volpe</h1>
+    <header>
+        <a href="index.html" class="logo txt-accent-3">
+            <h1>m/v</h1>
         </a>
+        <h2 class="h2--page">Quantity calculator</h2> 
     </header>
 
-    <main class="container-centered stack-l">
+    <main class="txt-center">
 
-        <h2 class="h2-divider">Quantity Calculator</h2>
-
-        <form id="quantity-calculator" class="flex flex-wrap gap-m">
-
-            <section class=" flex-up-2 quant-container">
-                <input class="full-width" type="number" id="a" name="a" placeholder="Current Quantity">
-                <p class="quant-sign quant-align">:</p>
-                <input class="full-width" type="number" id="b" name="b" placeholder="Current Portions">
-            </section>
-            <section class=" flex-up-2 quant-container">
-                <div class="container-border quant-align">
-                    <output name="result" for="a b c">0</output>
-                </div>
-                <p class="quant-sign quant-align">:</p>
-                <input class="full-width" type="number" id="c" name="c" placeholder="New Portions">
-            </section>
+        <form class="l-stack--m cal-container js-calculator">
         
+        <div class="cal-group">
+            <input type="number" id="a" placeholder="Current quantity" class="cal-item">
+            <input type="number" id="b" placeholder="Current portions" class="cal-item">
+        </div>
+
+        <p>equal to</p>
+
+        <div class="cal-group">
+            <div class="l-container-accent-3 calc-output-cont cal-item"><output for="a b c" id="result">0</output></div>
+            <input type="number" id="c" placeholder="New Portions" class="cal-item">
+        </div>
+
         </form>
         
     </main>
 
 
     <script>
-    const form = document.getElementById("quantity-calculator");
+    const form = document.querySelector(".js-calculator");
     const a = form.elements["a"];
     const b = form.elements["b"];
     const c = form.elements["c"];
