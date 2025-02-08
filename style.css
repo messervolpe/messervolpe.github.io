@@ -390,3 +390,16 @@ option {
 }
 
 
+.prompt-container {
+    container-type: inline-size;
+}
+
+
+  @container (min-width: 390px) {
+    .prompt-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;   
+    }
+  }
+
