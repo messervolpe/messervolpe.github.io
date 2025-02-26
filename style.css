@@ -122,7 +122,7 @@ margin-block-start: 1.5rem;
 .l-container-accent-2,
 .l-container-accent-3
  {
-    padding: var(--container-pad, 1rem)
+    padding: var(--container-pad, 1.5rem)
 }
 
 .l-container-dark{
@@ -139,6 +139,23 @@ margin-block-start: 1.5rem;
     border: hsl(var(--clr-accent-3)) 2px dashed;
 }
 
+.u-2col-container {
+    container-type: inline-size;
+}
+
+
+@container (min-width: 480px) {
+    .u-2col-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center; 
+      align-items: center;
+    }
+  }
+
+.u-2col-item {
+    flex: 1;
+}
 
 /*Screen reader only*/
 
@@ -163,7 +180,7 @@ body {
     font-family: var(--ff-main);
     color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-light));
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 header, main {
@@ -276,15 +293,6 @@ summary:hover {
 }
 
 
-.c-btt--primary:hover,
-.c-btt--primary:focus-visible,
-.c-btt--secondary:hover,
-.c-btt--secondary:focus-visible {
-    cursor: pointer;
-    outline: 2px solid hsl(var(--clr-dark));
-    outline-offset: 4px;
-}
-
 
 /*Link*/
 
@@ -317,7 +325,25 @@ select {
     background-color: hsl(var(--clr-light       ));
 }
 
-select:hover,
+label {
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+
+option {
+    font-family: monospace;
+    font-size: 16px;
+}
+
+
+/*Focus*/
+
+.c-btt--primary:hover,
+.c-btt--primary:focus-visible,
+.c-btt--secondary:hover,
+.c-btt--secondary:focus-visible,
+select:hover,   
 select:focus-visible ,
 input:hover,
 input:focus-visible,
@@ -326,12 +352,6 @@ input:focus-visible,
     outline: 2px solid hsl(var(--clr-dark));
     outline-offset: 4px;
 }
-
-option {
-    font-family: monospace;
-    font-size: 16px;
-}
-
 
 /*Colors*/
 
@@ -389,18 +409,4 @@ option {
 .calc-output-cont {
     --container-pad: 0.5rem;
 }
-
-
-.prompt-container {
-    container-type: inline-size;
-}
-
-
-  @container (min-width: 390px) {
-    .prompt-group {
-      display: flex;
-      gap: 16px;
-      justify-content: center;   
-    }
-  }
 
