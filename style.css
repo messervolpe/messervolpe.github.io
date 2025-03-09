@@ -180,7 +180,7 @@ body {
     font-family: var(--ff-main);
     color: hsl(var(--clr-dark));
     background-color: hsl(var(--clr-light));
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 header, main {
@@ -264,7 +264,7 @@ details[open] summary::marker {
   }
 
 summary:hover {
-    background-color: hsl(var(--clr-medium));
+    background-color: hsl(var(--clr-medium), .5);
 }
 
 
@@ -315,6 +315,14 @@ summary:hover {
     text-decoration: hsl(var(--clr-accent-2)) wavy underline 2px;
 }
 
+.c-link_workout, .c-link_workout:hover {
+    text-decoration: none;
+}
+
+.c-link_workout:hover {
+    background-color: hsl(var(--clr-medium), .5);
+}
+
 /*Input, Select*/
 
 input,
@@ -322,7 +330,7 @@ select {
     min-height: 44px;
     padding-inline: 8px;
     border: hsl(var(--clr-dark)) solid 2px;
-    background-color: hsl(var(--clr-light       ));
+    background-color: hsl(var(--clr-light));
 }
 
 label {
