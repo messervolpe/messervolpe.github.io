@@ -193,7 +193,7 @@ margin-block-start: 1.5rem;
 body {
     font-family: var(--ff-main);
     color: hsl(var(--clr-dark));
-    background-color: 38, 25%, 94%;
+    background-color: hsl(var(--clr-light));
     padding: 1rem;
 }
 
