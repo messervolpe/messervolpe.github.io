@@ -11,11 +11,7 @@
     --clr-green: 65, 36%, 31%;
     --clr-red: 22, 75%, 54%;
 
-   /*   --clr-dark: var(--clr-black);
-    --clr-light: var(--clr-white);
-    --clr-medium: var(--clr-gray); */
-
-    --clr-accent-0: var(--clr-black);
+    --clr-accent-0: var(--clr-dark);
     --clr-accent-1: var(--clr-blue);
     --clr-accent-2: var(--clr-green);
     --clr-accent-3: var(--clr-red);
@@ -197,7 +193,7 @@ margin-block-start: 1.5rem;
 body {
     font-family: var(--ff-main);
     color: hsl(var(--clr-dark));
-    background-color: hsl(var(--clr-light));
+    background-color: 38, 25%, 94%;
     padding: 1rem;
 }
 
@@ -221,7 +217,7 @@ header {
 .logo {
     font-size: var(--fs-600);
     text-decoration: none;
-    color: hsl(var(--clr-accent-0));
+    color: hsl(var(--clr-accent-1));
 }
 
 .logo:hover {
