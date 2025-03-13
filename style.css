@@ -4,15 +4,21 @@
 
 :root {
     /*colors*/
-    --clr-dark: 20, 3%, 23%;
+    --clr-black: 20, 3%, 23%;
+    --clr-white: 20, 3%, 23%;
+    --clr-gray: 37, 17%, 82%;
+    --clr-blue: 224, 58%, 51%;
+    --clr-green: 65, 36%, 31%;
+    --clr-red: 22, 75%, 54%;
 
-    --clr-light: 38, 25%, 94%;
-    --clr-medium: 37, 17%, 82%;
+    --clr-dark: var(--clr-black);
+    --clr-light: var(--clr-white);
+    --clr-medium: var(--clr-gray);
 
-    --clr-accent-1: 224, 58%, 51%;
-    --clr-accent-2: 65, 36%, 31%;
-    --clr-accent-3: 22, 75%, 54%;
-    /* --clr-accent-4:  46, 65%, 54%; */
+    --clr-accent-0: var(--clr-black);
+    --clr-accent-1: var(--clr-blue);
+    --clr-accent-2: var(--clr-green);
+    --clr-accent-3: var(--clr-red);
 
 
     /*font-size*/
@@ -37,8 +43,6 @@
     margin: 0;
     }
 
-/* Reset margins */
-
 body,
 h1,
 h2,
@@ -51,20 +55,17 @@ picture {
     margin: 0;
 }
 
-/* set up the body */
 body {
     line-height: 1.5;
     min-height: 100vh;
 }
 
-/* make images easier to work with */
 img,
 picutre {
     max-width: 100%;
     display: block;
 }
 
-/* make form elements easier to work with */
 input,
 button,
 textarea,
@@ -117,6 +118,14 @@ margin-block-start: 1.5rem;
 }
 
 
+.l-cont-dashed {
+    padding: var(--container-pad, 1.5rem)
+    border: hsl(var(--clr-accent-0)) 2px dashed;
+}
+
+
+/*
+
 .l-container-dark,
 .l-container-accent-1,
 .l-container-accent-2,
@@ -126,7 +135,7 @@ margin-block-start: 1.5rem;
 }
 
 .l-container-dark{
-    border: hsl(var(--clr-dark)) 2px dashed;
+    
 }
 
 .l-container-accent-1 {
@@ -138,6 +147,8 @@ margin-block-start: 1.5rem;
 .l-container-accent-3 {
     border: hsl(var(--clr-accent-3)) 2px dashed;
 }
+
+*/
 
 .u-2col-container {
     container-type: inline-size;
@@ -203,7 +214,7 @@ header {
 .logo {
     font-size: var(--fs-600);
     text-decoration: none;
-    color: hsl(var(--clr-accent-1));
+    color: hsl(var(--clr-accent-0));
 }
 
 .logo:hover {
@@ -277,8 +288,8 @@ summary:hover {
     padding-inline: 12px;
     color: hsl(var(--clr-light));
     text-align: center;
-    background-color: hsl(var(--clr-accent-1));
-    border: 2px solid hsl(var(--clr-accent-1));
+    background-color: hsl(var(--clr-accent-0));
+    border: 2px solid hsl(var(--clr-accent-0));
 }
 
 
@@ -289,7 +300,7 @@ summary:hover {
     color: hsl(var(--clr-dark));
     text-align: center;
     background-color: hsl(var(--clr-light));
-    border: 2px solid hsl(var(--clr-accent-1));
+    border: 2px solid hsl(var(--clr-accent-0));
 }
 
 
@@ -305,14 +316,9 @@ summary:hover {
 }
 
 .c-link:hover {
-    text-decoration: hsl(var(--clr-accent-1)) wavy underline 2px;
+    text-decoration: hsl(var(--clr-dark)) wavy underline 2px;
     text-underline-offset: 8px;
     
-}
-
-
-.c-link--archives:hover {
-    text-decoration: hsl(var(--clr-accent-2)) wavy underline 2px;
 }
 
 .c-link_workout, .c-link_workout:hover {
