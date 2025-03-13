@@ -217,7 +217,7 @@ header {
 .logo {
     font-size: var(--fs-600);
     text-decoration: none;
-    color: hsl(var(--clr-accent-1));
+    color: var(--clr-accent-1);
 }
 
 .logo:hover {
