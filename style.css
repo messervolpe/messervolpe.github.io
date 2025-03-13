@@ -11,9 +11,9 @@
     --clr-green: 65, 36%, 31%;
     --clr-red: 22, 75%, 54%;
 
-    --clr-dark: var(--clr-black);
-    --clr-light: var(--clr-white);
-    --clr-medium: var(--clr-gray);
+    --clr-dark: hsl(var(--clr-black));
+    --clr-light: hsl(var(--clr-white));
+    --clr-medium: hsl(var(--clr-gray));
 
     --clr-accent-0: var(--clr-black);
     --clr-accent-1: var(--clr-blue);
@@ -119,7 +119,7 @@ margin-block-start: 1.5rem;
 
 
 .l-cont-dashed {
-    padding: var(--container-pad, 1.5rem)
+    padding: var(--container-pad, 1.5rem);
     border: hsl(var(--clr-accent-0)) 2px dashed;
 }
 
