@@ -4,16 +4,16 @@
 
 :root {
     /*colors*/
-    --clr-black: 20, 3%, 23%;
-    --clr-white: 20, 3%, 23%;
-    --clr-gray: 37, 17%, 82%;
+    --clr-dark: 20, 3%, 23%;
+    --clr-light: 20, 3%, 23%;
+    --clr-medium: 37, 17%, 82%;
     --clr-blue: 224, 58%, 51%;
     --clr-green: 65, 36%, 31%;
     --clr-red: 22, 75%, 54%;
 
-    --clr-dark: hsl(var(--clr-black));
-    --clr-light: hsl(var(--clr-white));
-    --clr-medium: hsl(var(--clr-gray));
+   /*   --clr-dark: var(--clr-black);
+    --clr-light: var(--clr-white);
+    --clr-medium: var(--clr-gray); */
 
     --clr-accent-0: var(--clr-black);
     --clr-accent-1: var(--clr-blue);
