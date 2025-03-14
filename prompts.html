@@ -12,10 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
-<body class="l-stack--xl">
+<body class="l-stack--xl clr-style-2">
 
   <header>
-      <a href="index.html" class="logo txt-accent-2">
+      <a href="index.html" class="logo">
           <h1>m/v</h1>
       </a>
       <h2 class="h2--page">Prompts generator</h2> 
@@ -24,7 +24,7 @@
 
   <main class="l-stack--xl txt-center">
 
-    <section class="l-stack--m l-container-accent-2 u-2col-container">
+    <section class="l-stack--m l-cont-dashed u-2col-container">
 
       <div class="fs-600 u-2col-group">
         <p class="js-prompt-1">Prompt 1</p>
@@ -32,14 +32,14 @@
         <p class="js-prompt-2">Prompt 2</p>
       </div>
       
-      <button class="c-btt--primary bg-accent-2 br-accent-2 js-generate"> New prompts !</button>
+      <button class="c-btt--primary js-generate"> New prompts !</button>
 
     </section>
     
-    <section class="l-stack--m l-container-accent-2">
+    <section class="l-stack--m l-cont-dashed">
       <p class="fs-700"><span class="js-minutes">05</span>:<span class="js-seconds">00</span></p>
-      <button class="c-btt--primary bg-accent-2 br-accent-2 js-start-stop">Start</button>
-      <button class="c-btt--secondary br-accent-2 js-reset">Reset</button>
+      <button class="c-btt--primary js-start-stop">Start</button>
+      <button class="c-btt--secondary js-reset">Reset</button>
       <label class="sr-only" for="time-select">/ Timer</label>  
       <select id="time-select" class="js-timer" autocomplete="off">
         <option value="300">5 Minutes</option>
