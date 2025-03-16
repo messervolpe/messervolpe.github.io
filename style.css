@@ -1,7 +1,3 @@
-/* ------------------- */
-/* Costum properties   */
-/* ------------------- */
-
 :root {
     /*colors*/
     --clr-dark: 20, 3%, 23%;
@@ -14,22 +10,15 @@
 
     --clr-accent-0: var(--clr-dark);
  
-
-
-    /*font-size*/
     --fs-700: 1.50rem;
     --fs-600: 1.25rem;
     --fs-500: 1rem;
     --fs-400: 0.875rem;
     
-    
-    /*font-family*/
     --ff-main: "Fira Code", serif;
   }
 
-/* ------------------- */
-/* Reset               */
-/* ------------------- */
+/* Reset*/
 
 *,
 *::before,
@@ -37,8 +26,6 @@
     box-sizing: border-box;
     margin: 0;
     }
-
-/* Reset margins */
 
 body,
 h1,
@@ -52,20 +39,17 @@ picture {
     margin: 0;
 }
 
-/* set up the body */
 body {
     line-height: 1.5;
     min-height: 100vh;
 }
 
-/* make images easier to work with */
 img,
 picture {
     max-width: 100%;
     display: block;
 }
 
-/* make form elements easier to work with */
 input,
 button,
 textarea,
@@ -74,12 +58,9 @@ select {
     min-width: 0;
 }
 
+/* Utility Class*/
 
-/* ------------------- */
-/* Utility Class       */
-/* ------------------- */
-
-/*color Style*/
+/*Color Style*/
 
 .clr-style-1 {
     --clr-accent-0: var(--clr-accent-1);
@@ -105,7 +86,6 @@ select {
 .fs-600 {font-size: var(--fs-600);}
 .fs-500 {font-size: var(--fs-500);}
 .fs-400 {font-size: var(--fs-400);}
-
 
 /*Layout*/
 
@@ -136,7 +116,7 @@ margin-block-start: 1.5rem;
 
 
 .l-cont-dashed {
-    padding: var(--container-pad, 1.5rem);
+    padding: var(--container-pad, 0.5rem);
     border: hsl(var(--clr-accent-0)) 2px dashed;
 }
 
@@ -174,9 +154,7 @@ margin-block-start: 1.5rem;
   }
 
 
-/* ------------------- */
-/* General             */
-/* ------------------- */
+/*General*/
 
 body {
     font-family: var(--ff-main);
@@ -197,10 +175,8 @@ header {
     border-bottom: hsl(var(--clr-dark)) solid 1px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    
+    align-items: flex-end;   
 }
-
 
 .logo {
     font-size: var(--fs-600);
@@ -214,7 +190,6 @@ header {
 
 
 /*Typography*/
-
 
 h2, .h2 {
     font-size: var(--fs-600);
@@ -234,15 +209,12 @@ h3, .h3 {
     
 }
 
-
 ul {
     list-style-type: "- ";
 }
 
 
-/* ------------------- */
-/* Components          */
-/* ------------------- */
+/*Components*/
 
 /*Accordion*/
 
@@ -255,7 +227,6 @@ summary {
     padding: 0.5rem 0;
     cursor: pointer;
 }
-
 
 summary::marker {
     content: "+ "
@@ -272,7 +243,6 @@ summary:hover {
 
 /*Button*/
 
-
 .c-btt--primary {
     min-height: 44px;
     min-width: 80px;
@@ -283,7 +253,6 @@ summary:hover {
     border: 2px solid hsl(var(--clr-accent-0));
 }
 
-
 .c-btt--secondary {
     min-height: 44px;
     min-width: 80px;
@@ -293,8 +262,6 @@ summary:hover {
     background-color: hsl(var(--clr-light));
     border: 2px solid hsl(var(--clr-accent-0));
 }
-
-
 
 /*Link*/
 
@@ -360,9 +327,7 @@ input:focus-visible,
 }
 
 
-/* ------------------- */
-/* Page specific       */
-/* ------------------- */
+/*Page specific*/
 
 .cal-container {
     display: flex;
@@ -377,7 +342,6 @@ input:focus-visible,
     width:100%;
     max-width: 40rem;
     
-
     display: flex;
     flex-wrap: wrap;
 
