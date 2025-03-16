@@ -116,7 +116,7 @@ margin-block-start: 1.5rem;
 
 
 .l-cont-dashed {
-    padding: var(--container-pad, 0.5rem);
+    padding: var(--container-pad, 1rem);
     border: hsl(var(--clr-accent-0)) 2px dashed;
 }
 
