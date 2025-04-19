@@ -23,23 +23,28 @@
 
   <main class="l-stack--xl" >
 
-    <button type="button" class="c-btt--primary js-make-shape">Generate</button>
+      <button type="button" class="c-btt--primary js-make-shape">Generate</button>
+      <div>
+        <p>Corners: <output id="value"></output></p>
+        <input type="range" min="5" max="25" value="12" class="slider js-slider">
+      </div>
+      
+      
+    
 
-    <svg width="400" height="400" style="display: block;">
-        <path class="js-path1" fill="#3a60cb" d="M 380 20 L 380 380 L 20 380 L 20 20 Z" />
-    </svg>
-
-    <svg width="400" height="400" style="display: block;">
-        <path class="js-path2" fill="#3a60cb" d="M 380 20 L 380 380 L 20 380 L 20 20 Z" />
+    <svg width="320px" height="320px" style="display: block;">
+        <path class="js-path" fill="#3a60cb" d="M 380 20 L 380 380 L 20 380 L 20 20 Z" />
     </svg>
 
 </body>
 
 <script>
 
-const Shape1 = document.querySelector(".js-path1");
-const Shape2 = document.querySelector(".js-path2");
-const Path1 = [[380, 20], [380, 380], [20, 380], [20, 20]];
+const Shape = document.querySelector(".js-path");
+const value = document.querySelector("#value");
+value.textContent = document.querySelector(".js-slider").value;
+
+let Points = 25;
 
 function randomPairsArray(length, min, max) {
   return Array.from({ length }, () => [
@@ -48,42 +53,29 @@ function randomPairsArray(length, min, max) {
   ]);
 }
 
-function getRandomInt(min, max) {
-   return Math.floor(Math.random() * (max - min + 1) + min);
- }
+function updatePoints() {
+  Points = document.querySelector(".js-slider").value;
+  value.textContent = document.querySelector(".js-slider").value;
+  
+}
 
 function makeShape() {
 
-    Path1.map(
-     subArr => {
-     subArr[0] += getRandomInt(-20, 20);
-     subArr[1] += getRandomInt(-20, 20);
-     });
+    const newCoordinates = randomPairsArray(Points, 20, 320);
+    const newPathData = newCoordinates.map(pair => pair.join(' ')).join(' L ');
 
-     newPathData1 = Path1.map(pair => pair.join(' ')).join(' L ');
+    newPath = `M ${newPathData} Z`;
 
-    newPath1 = `M ${newPathData1} Z`;
-
-     Shape1.setAttribute("d", newPath1);
-
-
-
-
-    
-    const newCoordinates2 = randomPairsArray(25, 20, 380);
-    const newPathData2 = newCoordinates2.map(pair => pair.join(' ')).join(' L ');
-
-    newPath2 = `M ${newPathData2} Z`;
-
-    Shape2.setAttribute("d", newPath2);
+    Shape.setAttribute("d", newPath);
 }
 
+const bttRange = document.querySelector(".js-slider");
+
+bttRange.addEventListener("input", updatePoints);
 
 const bttShape = document.querySelector(".js-make-shape");
 
 bttShape.addEventListener("click", makeShape);
-
-
 
 
 </script>
