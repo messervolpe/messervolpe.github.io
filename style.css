@@ -360,3 +360,32 @@ input:focus-visible,
     --container-pad: 0.5rem;
 }
 
+
+.shapes {
+    display: flex;
+    margin: 2rem auto;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+
+}
+
+.starburst-m {
+    width: 60px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(100% 50%,78.53% 59.27%,90.45% 79.39%,67.63% 74.27%,65.45% 97.55%,50% 80%,34.55% 97.55%,32.37% 74.27%,9.55% 79.39%,21.47% 59.27%,0% 50%,21.47% 40.73%,9.55% 20.61%,32.37% 25.73%,34.55% 2.45%,50% 20%,65.45% 2.45%,67.63% 25.73%,90.45% 20.61%,78.53% 40.73%);
+    background-color: hsl(var(--clr-accent-0));
+    
+  }
+
+  .starburst-s {
+    width: 30px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(100% 50%,77.72% 61.48%,85.36% 85.36%,61.48% 77.72%,50% 100%,38.52% 77.72%,14.64% 85.36%,22.28% 61.48%,0% 50%,22.28% 38.52%,14.64% 14.64%,38.52% 22.28%,50% 0%,61.48% 22.28%,85.36% 14.64%,77.72% 38.52%);
+    background-color: hsl(var(--clr-accent-0));
+    
+  }
+
+
+  
