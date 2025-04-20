@@ -21,20 +21,19 @@
       <h2 class="h2--page">Prompts generator</h2> 
   </header>
 
-  <main class="l-stack--xl" >
+  <main class="l-stack--xl l-flex-column">
 
-      <button type="button" class="c-btt--primary js-make-shape">Generate</button>
-      <div>
-        <p>Corners: <output id="value"></output></p>
-        <input type="range" min="5" max="25" value="12" class="slider js-slider">
-      </div>
+    <div>
+      <p>Corners: <output id="value"></output></p>
+      <input type="range" min="5" max="25" value="12" class="slider js-slider">
+    </div>
       
-      
-    
-
-    <svg width="320px" height="320px" style="display: block;">
-        <path class="js-path" fill="#3a60cb" d="M 380 20 L 380 380 L 20 380 L 20 20 Z" />
+    <svg width="380px" height="380px" style="display: block;">
+        <path class="js-path" fill="#3a60cb" d="M 380 0 L 380 380 L 0 380 L 0 0 Z" />
     </svg>
+
+    <button type="button" class="c-btt--primary js-make-shape">Generate</button> 
+  </main>
 
 </body>
 
@@ -61,7 +60,7 @@ function updatePoints() {
 
 function makeShape() {
 
-    const newCoordinates = randomPairsArray(Points, 20, 320);
+    const newCoordinates = randomPairsArray(Points, 20, 380);
     const newPathData = newCoordinates.map(pair => pair.join(' ')).join(' L ');
 
     newPath = `M ${newPathData} Z`;

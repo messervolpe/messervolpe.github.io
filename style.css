@@ -118,6 +118,13 @@ margin-block-start: 1.5rem;
     gap: var(--flex-gap, 1rem)
 }
 
+.l-flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
 
 .l-cont-dashed {
     padding: var(--container-pad, 1rem);
