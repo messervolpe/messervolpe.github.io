@@ -118,6 +118,10 @@ margin-block-start: 1.5rem;
     gap: var(--flex-gap, 1rem)
 }
 
+.l-flex-align {
+    align-items: center;
+}
+
 .l-flex-column {
     display: flex;
     flex-direction: column;
