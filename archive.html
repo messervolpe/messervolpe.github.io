@@ -21,7 +21,9 @@
         <h2 class="h2--page">Archives</h2>
     </header>
 
-    <main>
+    <main class="l-stack--l">
+        <button class="c-btt--primary js-open">Open All</button>
+         <button class="c-btt--primary js-close">Close All</button>
          <details open class="l-stack--l">
             <summary class="h2">June</summary>
             <section>
@@ -210,6 +212,28 @@
             </section>
         </details>
     </main>
+
+    <script>
+        let btnOpen = document.querySelector(".js-open");
+        let btnClose =document.querySelector(".js-close")
+        let accordions = document.querySelectorAll('details');
+
+        function OpenAll() {
+            for (let i = 0; i < accordions.length; i++) {
+            accordions[i].setAttribute("open", "")
+            }
+        }
+
+        function CloseAll() {
+            for (let i = 0; i < accordions.length; i++) {
+            accordions[i].removeAttribute("open")
+            }
+        }
+
+        btnOpen.addEventListener('click', OpenAll)
+        btnClose.addEventListener('click', CloseAll)
+
+    </script>
 
 </body>
 
