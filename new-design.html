@@ -11,24 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
 </head>
 <body>
-    <main>
-        <div class="card card--s">
-                <nav>
-                    <a href="index.html" class="link--logo">m/v</a>
-                    <div>
-                        <a href="" class="link--nav"><span class="link--text">a navi link</span></a>
-                        <a href="" class="link--nav"><span class="link--text">a navi link</span></a>
-                        <a href="" class="link--nav"><span class="link--text link--text_active">a navi link</span></a>
-                    </div>
-                    
-                </nav>
-        </div>
-        <div class="card card--m">
-            <div class="content stack--s">
+    <header class="card card--s">
+            <a href="index.html" class="link--logo">m/v</a>
+            <nav>
+                <a class="nav--btn js-btn-nav">OPEN NAV</a>
+                <ul class="nav--container_hidden js-nav">
+                    <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
+                    <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
+                    <li><a href="" class="link--nav"><span class="link--text link--text_active">a navi link</span></a></li>
+                    <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="card card--m">
+        <div class="content stack--s">
                 <h1>Lorem Ipsum Dolor</h1>
                 <h2>Lorem Ipsum Dolor</h2>
                 <h3>Lorem Ipsum Dolor</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptuaLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptuaLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua</p>
                 <button class="btn--primary">primary</button>
                 <button class="btn--secondary">secondary</button>
                 <div>
@@ -42,8 +42,24 @@
                     <label for="input1">Input</label>
                     <input type="text">
                 </div>
-            </div>
         </div>
     </main>
 </body>
 </html>
+
+<script>
+    let btnNav = document.querySelector(".js-btn-nav");
+    let Nav = document.querySelector(".js-nav");
+
+    function toggleNav() {
+        Nav.classList.toggle("nav--container_show");
+        if (btnNav.innerText === "OPEN NAV") {
+            btnNav.innerText = "CLOSE NAV"
+        }
+        else {
+            btnNav.innerText = "OPEN NAV"
+        }
+    }
+
+    btnNav.addEventListener('click', toggleNav)
+</script>
