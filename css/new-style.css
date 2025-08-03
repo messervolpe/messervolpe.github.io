@@ -39,7 +39,7 @@ img, picture {
 
 input, button, textarea, select {
     font: inherit;
-    color: inherit;
+    color: var(--crl-dark);
     min-width: 0;
 }
 
