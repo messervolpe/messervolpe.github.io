@@ -39,6 +39,7 @@ img, picture {
 
 input, button, textarea, select {
     font: inherit;
+    color: inherit;
     min-width: 0;
 }
 
@@ -199,10 +200,6 @@ label {
     } 
 
     header{flex-direction: column;}
-
-    .icon--nav {
-        display: none;
-    }
 
     nav {align-items: center;}
 
