@@ -117,7 +117,7 @@ nav {
 
 .link--logo {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--clr-dark);
     text-decoration: none;
@@ -203,6 +203,9 @@ label {
     .icon--nav {
         display: none;
     }
+
+    nav {align-items: center;}
+
 
    .nav--container_hidden {
     display: block;

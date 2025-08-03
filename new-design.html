@@ -14,7 +14,7 @@
     <header class="card card--s">
             <a href="index.html" class="link--logo">m/v</a>
             <nav>
-                <a class="nav--btn js-btn-nav">OPEN NAV</a>
+                <a class="nav--btn js-btn-nav">+ menu</a>
                 <ul class="nav--container_hidden js-nav">
                     <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
                     <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
@@ -53,11 +53,11 @@
 
     function toggleNav() {
         Nav.classList.toggle("nav--container_show");
-        if (btnNav.innerText === "OPEN NAV") {
-            btnNav.innerText = "CLOSE NAV"
+        if (btnNav.innerText === "+ menu") {
+            btnNav.innerText = "- menu"
         }
         else {
-            btnNav.innerText = "OPEN NAV"
+            btnNav.innerText = "+ menu"
         }
     }
 
