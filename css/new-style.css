@@ -86,7 +86,11 @@ h3 {
     padding: var(--size-s);
 }
 
-.card--s {margin-bottom: var(--size-s);}
+.card--s {
+    margin-bottom: var(--size-s);
+    position: sticky;
+    top: 0;
+}
 
 header {
     display: flex;
@@ -110,14 +114,10 @@ nav {
     display: none;
 }
 
-.nav--container_show {
-    display: block;
-}
-
 
 .link--logo {
     display: inline-block;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 800;
     color: var(--clr-dark);
     text-decoration: none;
