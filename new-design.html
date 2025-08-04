@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>New Design</title>
-    <meta name="viewport" content="width=divice-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- style -->
     <link href="css/new-style.css" rel="stylesheet">
     <!-- font links -->
@@ -12,14 +12,14 @@
 </head>
 <body>
     <header class="card card--s">
-            <a href="index.html" class="link--logo">m/v</a>
+            <a href="index.html" class="nav__logo">m/v</a>
             <nav>
-                <a class="nav--btn js-nav-btn">+ menu</a>
-                <ul class="nav--container_hidden js-nav">
-                    <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
-                    <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
-                    <li><a href="" class="link--nav"><span class="link--text link--text_active">a navi link</span></a></li>
-                    <li><a href="" class="link--nav"><span class="link--text">a navi link</span></a></li>
+                <button class="nav__btn js-nav-btn">+ menu</button>
+                <ul class="js-nav">
+                    <li><a href="" class="nav__link"><span class="">a navi link</span></a></li>
+                    <li><a href="" class="nav__link"><span class="">a navi link</span></a></li>
+                    <li><a href="" class="nav__link"><span class="nav__link--active">a navi link</span></a></li>
+                    <li><a href="" class="nav__link"><span class="">a navi link</span></a></li>
                 </ul>
             </nav>
     </header>
@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <label for="input1">Input</label>
-                    <input type="text">
+                    <input type="text" id="input1">
                 </div>
         </div>
     </main>
@@ -49,10 +49,14 @@
 
 <script>
     let btnNav = document.querySelector(".js-nav-btn");
-    let Nav = document.querySelector(".js-nav");
+    let nav = document.querySelector(".js-nav");
+
+    if (window.innerWidth < 700) {
+    nav.classList.add("nav__list--hidden");
+    }
 
     function toggleNav() {
-        Nav.classList.toggle("nav--container_hidden");
+        nav.classList.toggle("nav__list--hidden");
         if (btnNav.innerText == "+ menu") {
             btnNav.innerText = "- menu";
         }

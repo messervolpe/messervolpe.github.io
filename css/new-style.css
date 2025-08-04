@@ -30,7 +30,9 @@ ul {
     padding-left: 0;
 }
 
-body {line-height: 1.4; min-height: 100vh;}
+body {
+    line-height: 1.4; 
+    min-height: 100vh;}
 
 img, picture {
     max-width: 100%;
@@ -39,7 +41,7 @@ img, picture {
 
 input, button, textarea, select {
     font: inherit;
-    color: var(--crl-dark);
+    color: var(--clr-dark);
     min-width: 0;
 }
 
@@ -105,18 +107,22 @@ nav {
 
 }
 
-.nav--btn {
+.nav__btn {
     display: flex;
     align-items: center;
     min-height: var(--size-l);
+    background-color: transparent;
+    border: none;
 }
 
-.nav--container_hidden {
+.nav__btn:hover {background-color: var(--clr-neutral);}
+
+.nav__list--hidden {
     display: none;
 }
 
 
-.link--logo {
+.nav__logo {
     display: inline-block;
     font-size: 1.75rem;
     font-weight: 800;
@@ -125,7 +131,7 @@ nav {
     text-align: center;
 }
 
-.link--nav {
+.nav__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,12 +140,12 @@ nav {
     text-decoration: none;                                                                                                                                                                                                                                                                                                                                        
 }
 
-.link--text_active {
+.nav__link--active {
     background-color: var(--clr-2);
     padding: var(--size-xs);
 }
 
-.link--nav:hover>.link--text{
+.nav__link:hover> span {
     background-color: var(--clr-2);
     text-decoration: 1px solid underline;
     padding: var(--size-xs);
@@ -183,6 +189,9 @@ label {
     text-transform: uppercase;
 }
 
+
+/* Media */
+
 @media (max-width: 500px) {
 
     input, select, .btn--primary, .btn--secondary {
@@ -204,11 +213,11 @@ label {
     nav {align-items: center;}
 
 
-   .nav--container_hidden {
+   .nav__list--hidden {
     display: block;
     } 
 
-    .nav--btn {
+    .nav__btn {
         display: none;
     }
 
