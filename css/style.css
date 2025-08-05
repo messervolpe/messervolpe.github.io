@@ -249,7 +249,7 @@ summary::marker {
 
 details[open] summary::marker {
     content: "* ";
-  }
+}
 
 summary:hover {
     background-color: hsl(var(--clr-medium), .5);

@@ -49,6 +49,8 @@ button {cursor: pointer;}
 
 /* Utilities */
 
+.stack--xs > * + * { margin-block-start: var(--size-xs);}
+
 .stack--s > * + * { margin-block-start: var(--size-s);}
 
 .stack--m > * + * { margin-block-start: var(--size-m);}
@@ -79,7 +81,7 @@ h2 {
 h3 {
     font-size: 0.75rem;
     line-height: 100%;
-    font-weight: 300;
+    font-weight: 100;
     text-transform: uppercase;
 }
 
@@ -137,18 +139,16 @@ nav {
     justify-content: center;
     min-height: var(--size-l);
     color: var(--clr-dark);
-    text-decoration: none;                                                                                                                                                                                                                                                                                                                                        
+    text-decoration: none;                                                                                                                                                                                                                                                                                                                                     
 }
 
 .nav__link--active {
     background-color: var(--clr-2);
-    padding: var(--size-xs);
 }
 
 .nav__link:hover> span {
     background-color: var(--clr-2);
     text-decoration: 1px solid underline;
-    padding: var(--size-xs);
 }
 
 .btn--primary {
@@ -190,6 +190,31 @@ label {
 }
 
 
+.arc__title {
+    min-width: 80px;
+    margin-bottom: var(--size-xs);
+}
+
+summary {
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 100%;
+    font-weight: 800;
+}
+
+summary::marker {
+    content: "+ "
+}
+
+details[open] summary::marker {
+    content: "- ";
+}
+
+summary:hover {
+    background-color: hsl(var(--clr-medium), .5);
+}
+
+
 /* Media */
 
 @media (max-width: 500px) {
@@ -228,6 +253,16 @@ label {
         align-self: flex-start;
     
     }
-    .card--m {max-width: 750px;}
+
+    .card--m {
+        max-width: 750px;
+        flex-grow: 2;
+
+    }
+
+    .arc__list {
+        display: flex;
+        gap: var(--size-m);
+    }
 }
 
