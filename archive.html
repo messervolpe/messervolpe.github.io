@@ -28,10 +28,10 @@
                     <summary>june</summary>
                     <div class="arc__list">
                         <h3 class="arc__title">read</h3>
-                            <ul>
-                                <li>hello 1</li>
-                                <li>hello 2</li>
-                            </ul>       
+                        <ul>
+                            <li>hello 1</li>
+                            <li>hello 2</li>
+                        </ul>       
                     </div>
                     <div class="arc__list">
                         <h3 class="arc__title">watched</h3>
@@ -51,25 +51,5 @@
         </div>
     </main>
 </body>
+<script type="text/javascript" src="js/nav.js"></script>
 </html>
-
-<script>
-    let btnNav = document.querySelector(".js-nav-btn");
-    let nav = document.querySelector(".js-nav");
-
-    if (window.innerWidth < 700) {
-    nav.classList.add("nav__list--hidden");
-    }
-
-    function toggleNav() {
-        nav.classList.toggle("nav__list--hidden");
-        if (btnNav.innerText == "+ menu") {
-            btnNav.innerText = "- menu";
-        }
-        else {
-            btnNav.innerText = "+ menu";
-        }
-    }
-
-    btnNav.addEventListener('click', toggleNav);
-</script>

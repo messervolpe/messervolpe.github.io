@@ -79,10 +79,11 @@ h2 {
 }
 
 h3 {
-    font-size: 0.75rem;
+    font-size: 0.80rem;
     line-height: 100%;
     font-weight: 100;
     text-transform: uppercase;
+    margin-bottom: var(--size-m);
 }
 
 .card {
@@ -203,11 +204,11 @@ summary {
 }
 
 summary::marker {
-    content: "+ "
+    content: "+"
 }
 
 details[open] summary::marker {
-    content: "- ";
+    content: "-";
 }
 
 summary:hover {

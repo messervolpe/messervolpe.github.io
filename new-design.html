@@ -6,7 +6,7 @@
     <!-- style -->
     <link href="css/new-style.css" rel="stylesheet">
     <!-- font links -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
 </head>
@@ -43,25 +43,5 @@
         </div>
     </main>
 </body>
+<script type="text/javascript" src="js/nav.js"></script>
 </html>
-
-<script>
-    let btnNav = document.querySelector(".js-nav-btn");
-    let nav = document.querySelector(".js-nav");
-
-    if (window.innerWidth < 700) {
-    nav.classList.add("nav__list--hidden");
-    }
-
-    function toggleNav() {
-        nav.classList.toggle("nav__list--hidden");
-        if (btnNav.innerText == "+ menu") {
-            btnNav.innerText = "- menu";
-        }
-        else {
-            btnNav.innerText = "+ menu";
-        }
-    }
-
-    btnNav.addEventListener('click', toggleNav);
-</script>
