@@ -1,0 +1,26 @@
+{
+"months": {
+    "july": {
+        "read": [
+            {"name": "Title"}
+        ],
+        "watched": [
+            {"name": "Title"}
+        ],
+        "played": [
+            {"name": "Title"}
+        ]
+    },
+    "june": {
+        "read": [
+            {"name": "Title"}
+        ],
+        "watched": [
+            {"name": "Title"}
+        ],
+        "played": [
+            {"name": "Title"}
+        ]
+    }
+    }   
+}
