@@ -27,7 +27,7 @@
                 <div id="books-container"></div>
         </div>
     </main>
-    <script type="text/javascript" src="js/nav.js">
+    <script>
         fetch('archive.json')
         .then(response => response.json())
         .then(data => {
@@ -46,5 +46,7 @@
         })
         .catch(error => console.error('Error loading books:', error));
         </script>
+    </script>
+    <script type="text/javascript" src="js/nav.js"></script>
 </body>
 </html>
