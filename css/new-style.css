@@ -49,8 +49,6 @@ button {cursor: pointer;}
 
 /* Utilities */
 
-.stack--xs > * + * { margin-block-start: var(--size-xs);}
-
 .stack--s > * + * { margin-block-start: var(--size-s);}
 
 .stack--m > * + * { margin-block-start: var(--size-m);}
@@ -107,7 +105,6 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: end;
-
 }
 
 .nav__btn {
@@ -120,10 +117,7 @@ nav {
 
 .nav__btn:hover {background-color: var(--clr-neutral);}
 
-.nav__list--hidden {
-    display: none;
-}
-
+.nav__list--hidden {display: none;}
 
 .nav__logo {
     display: inline-block;
@@ -147,7 +141,7 @@ nav {
     background-color: var(--clr-2);
 }
 
-.nav__link:hover> span {
+.nav__link:hover > span {
     background-color: var(--clr-2);
     text-decoration: 1px solid underline;
 }
@@ -175,7 +169,6 @@ input, select {
     min-height: var(--size-l);
     background-color: var(--clr-neutral);
     border: 1px solid var(--clr-neutral);
-
 }
 
 input:hover, input:focus, select:hover, select:focus {
@@ -189,7 +182,6 @@ label {
     line-height: 100%;
     text-transform: uppercase;
 }
-
 
 .arc__title {
     min-width: 80px;
@@ -238,10 +230,7 @@ summary:hover {
 
     nav {align-items: center;}
 
-
-   .nav__list--hidden {
-    display: block;
-    } 
+   .nav__list--hidden {display: block;} 
 
     .nav__btn {
         display: none;

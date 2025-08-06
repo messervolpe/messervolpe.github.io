@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script src="test.json" type="application/json"></script>
+    <!-- Uncoment the line below if you use a file JS and comment ore delete the tag <script>And the code</script> in the body -->
+    <!-- <script src="./main.js"></script> -->
+    <title>FAQ</title>
+</head>
+
+<body>
+    <!-- START JS: This code can go in a main.js file located in the same folder, calling in the head <script src="./main.js"></script> -->
+    <script>
+        //Event on ready DOM
+        document.addEventListener("DOMContentLoaded", function () {
+            //Fetch data
+            fetch('test.json')
+                .then((response) => response.json())
+                .then((json) => {
+                    //Then json info is here
+                    console.log(json);
+
+                    //You can play here doing a loop and using de iterator "i" for make it at one.
+                  //Example: document.querySelector(".faq--0" + i + "h1").innerHTML = json[0].title;
+                    //Example: document.querySelector(".faq--0" + i + " p").innerHTML = json[0].answer;
+                    document.querySelector(".faq--01 h1").innerHTML = json[0].title;
+                    document.querySelector(".faq--01 p").innerHTML = json[0].answer;
+                })
+        });
+    </script>
+    <!-- END JS-->
+
+    <!-- START Content HTML -->
+    <div class="faq--container">
+
+        <section class="faq--01">
+            <h1></h1>
+            <p></p>
+        </section>
+
+        <section class="faq--02">
+            <h1></h1>
+            <p></p>
+        </section>
+
+    </div>
+    <!-- END Content HTML -->
+</body>
+
+</html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>New Design</title>
+    <title>Archive</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- style -->
     <link href="css/new-style.css" rel="stylesheet">
     <!-- font links -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
 </head>
@@ -24,32 +24,27 @@
     <main class="card card--m">
         <div class="content stack--m">
                 <h1>Archive</h1>
-                <details class="stack--s" open>
-                    <summary>june</summary>
-                    <div class="arc__list">
-                        <h3 class="arc__title">read</h3>
-                        <ul>
-                            <li>hello 1</li>
-                            <li>hello 2</li>
-                        </ul>       
-                    </div>
-                    <div class="arc__list">
-                        <h3 class="arc__title">watched</h3>
-                            <ul>
-                                <li>hello 1</li>
-                                <li>hello 2</li>
-                            </ul>       
-                    </div>
-                    <div class="arc__list">
-                        <h3 class="arc__title">played</h3>
-                            <ul>
-                                <li>hello 1</li>
-                                <li>hello 2</li>
-                            </ul>       
-                    </div>
-                </details>
+                <div id="books-container"></div>
         </div>
     </main>
+    <script type="text/javascript" src="js/nav.js">
+        fetch('archive.json')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('books-container');
+            
+            data.books.forEach(book => {
+                const h3 = document.createElement('h3');
+                h3.textContent = book.title;
+                
+                const p = document.createElement('p');
+                p.textContent = book.author;
+                
+                container.appendChild(h3);
+                container.appendChild(p);
+            });
+        })
+        .catch(error => console.error('Error loading books:', error));
+        </script>
 </body>
-<script type="text/javascript" src="js/nav.js"></script>
 </html>
