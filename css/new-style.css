@@ -183,10 +183,7 @@ label {
     text-transform: uppercase;
 }
 
-.arc__title {
-    min-width: 80px;
-    margin-bottom: var(--size-xs);
-}
+
 
 summary {
     cursor: pointer;
@@ -250,9 +247,5 @@ summary:hover {
 
     }
 
-    .arc__list {
-        display: flex;
-        gap: var(--size-m);
-    }
 }
 
