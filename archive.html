@@ -21,22 +21,84 @@
                 </ul>
             </nav>
     </header>
-    <main class="card card--m">
-        <div class="content stack--m">
-                <h1>Archive</h1>
-                <div class="stack--s stack-flex">
-                    <h3>hello</h3>
-                    <div class="stack--xs">
-                        <p>Childhood's end, Arthur Clarke ✓</p>
-                        <p>Sull'amore e altri demoni, Gabriel García Márquez ✓</p>
-                    </div>
+    <main class="card card--m stack--m">
+        <h1>Archive</h1>
+         <details open class="stack--s">
+            <summary class="h2">July</summary>
+            <section class="stack--xs stack--flex">
+                <h3>Reading</h3>
+                <ul>
+                    <li>Orbital, Samantha Harvey ✓</li>
+                    <li>Mord im Orient Express, A. Christie ✓</li>
+                    <li>Maame, Jessica George ✓</li>
+                    <li>La terra, il cielo, i corvi GN ✓</li>
+                    <li>Non stancarti di andare GN ✓</li>
+                    <li>Wild Thoughts from wild Places, -</li>
+                    <li>Homo Faber, -</li>
+                    <li>Poirot erste Fälle</li>
+                    <li>**august: fame, kahnemann</li>
                     
-                </div>
-                
-                <div id="books-container"></div>
-        </div>
+                </ul>
+            </section> 
+            <section class="stack--xs stack--flex">
+                <h3>Playing</h3>
+                <ul>
+                    <li>Chants of Shannar</li>
+                    
+                </ul>
+            </section> 
+            <section class="stack--xs stack--flex">
+                <h3>Watched</h3>
+                <ul>
+                    <li>**august: firefly &lt3 &lt3</li>
+                </ul>
+            </section>
+        </details>
+
+        <details class="stack--s">
+            <summary class="h2">June</summary>
+            <section class="stack--xs stack--flex">
+                <h3>Reading</h3>
+                <ul>
+                    <li>Childhood's end, Arthur Clarke ✓</li>
+                    <li>West, West Texas, Tillie Walden (GN) ✓</li>
+                    <li>Randevouz with Rama, Arthur Clarke ✓</li>
+                    <li>Il Deserto dei Tartari, Dino Buzzati ✓ </li>
+                    <li>I Ragazzi, Edith Wharton ✓ </li>
+                    <li>Being Logical: A Guide to Good Thinking ✓</li>
+                    <li>Tonio Kröger, Thomas Mann ✓</li>
+                    <li>Sull'amore e altri demoni, Gabriel García Márquez ✓</li>
+                    <li>Animalia, Julio Cortázar </li>
+                    <li>21 Racconti, Ernest Hemingway </li>
+                    <li>L'età dell'innocenze, Edith Wharton </li>
+                    
+                </ul>
+            </section> 
+            <section class="stack--xs stack--flex">
+                <h3>Playing</h3>
+                <ul>
+                    <li>***</li>
+                    
+                </ul>
+            </section> 
+            <section class="stack--xs stack--flex">
+                <h3>Watched</h3>
+                <ul>
+                    <li>Long way home &lt3 </li>
+                    <li>Spotlilght</li>
+                </ul>
+            </section>
+        </details>
+
+
+
+
+
+
+
+
     </main>
-    <script>
+    <!-- <script>
         fetch('json/archive.json')
         .then(response => response.json())
         .then(data => {
@@ -86,8 +148,8 @@
         //     });
         // })
         // .catch(error => console.error('Error loading books:', error));
-        </script>
-    </script>
+
+    </script> -->
     <script type="text/javascript" src="js/nav.js"></script>
 </body>
 </html>
