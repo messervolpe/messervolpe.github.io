@@ -136,7 +136,7 @@ nav {
     justify-content: center;
     min-height: var(--size-l);
     color: var(--clr-dark);
-    text-decoration: none;                                                                                                                                                                                                                                                                                                                                     
+    text-decoration:none;                                          
 }
 
 .nav__link--active {
@@ -145,36 +145,37 @@ nav {
 
 .nav__link:hover > span {
     background-color: var(--clr-2);
-    text-decoration: 1px solid underline;
+    text-decoration: 1.5px solid underline;
 }
 
 .btn--primary {
     min-height: var(--size-l);
+    padding: 0 var(--size-s);
     background-color: var(--clr-4);
-    border: 1px solid var(--clr-4);
-
+    border: 1.5px solid var(--clr-4);
 }
 
 .btn--secondary {
     min-height: var(--size-l);
+    padding: 0 var(--size-s);
     background-color: var(--clr-light);
-    border: 1px solid var(--clr-4);
+    border: 1.5px solid var(--clr-4);
 }
 
 .btn--primary:hover, .btn--secondary:hover {
-    border: 1px solid var(--clr-dark);
-    text-decoration: 1px solid underline;
+    border: 1.5px solid var(--clr-dark);
+    text-decoration: 1.5px solid underline;
 }
 
 input, select {
     display: block;
     min-height: var(--size-l);
     background-color: var(--clr-neutral);
-    border: 1px solid var(--clr-neutral);
+    border: 1.5px solid var(--clr-neutral);
 }
 
 input:hover, input:focus, select:hover, select:focus {
-    outline: 1px solid var(--clr-dark);
+    outline: 1.5px solid var(--clr-dark);
 }
 
 label {
@@ -253,3 +254,9 @@ details[open] summary::marker {
     .stack--flex > * + * { margin-block-start: 0;}
 }
 
+.starburst-m {
+    width: 30px; /* adjust to control the size */
+    aspect-ratio: 1;
+    clip-path: polygon(100% 50%,77.72% 61.48%,85.36% 85.36%,61.48% 77.72%,50% 100%,38.52% 77.72%,14.64% 85.36%,22.28% 61.48%,0% 50%,22.28% 38.52%,14.64% 14.64%,38.52% 22.28%,50% 0%,61.48% 22.28%,85.36% 14.64%,77.72% 38.52%);
+    background-color: var(--clr-dark);
+  }
