@@ -1,26 +1,28 @@
-{
-"months": {
-    "july": {
-        "read": [
-            {"name": "Title"}
-        ],
-        "watched": [
-            {"name": "Title"}
-        ],
-        "played": [
-            {"name": "Title"}
-        ]
+{"months": [
+    {
+    "name": "Juni",
+    "categories":[
+        {
+        "name": "read",
+        "entries": ["Title1", "Title2"]
+        },
+        {
+        "name": "watched",
+        "entries": ["Movie1", "Movie2"]
+        }
+    ]
     },
-    "june": {
-        "read": [
-            {"name": "Title"}
-        ],
-        "watched": [
-            {"name": "Title"}
-        ],
-        "played": [
-            {"name": "Title"}
-        ]
+    {
+    "name": "Juli",
+    "categories":[
+        {
+        "name": "read",
+        "entries": ["Title1", "Title2"]
+        },
+        {
+        "name": "watched",
+        "entries": ["Movie1", "Movie2"]
+        }
+    ]
     }
-    }   
-}
+]}
