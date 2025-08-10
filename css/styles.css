@@ -55,6 +55,8 @@ button {cursor: pointer;}
 
 .stack--m > * + * { margin-block-start: var(--size-m);}
 
+.stack--l > * + * { margin-block-start: var(--size-m);}
+
 /* Styles */
 
 body {
