@@ -60,7 +60,7 @@ button {cursor: pointer;}
 /* Styles */
 
 body {
-    background-color: var(--clr-1);
+    background-color: var(--clr-neutral);
     font-family: "Azeret Mono", monospace;
     font-size: 0.875rem;
     line-height: 1.4286; 
@@ -111,16 +111,6 @@ nav {
     align-items: end;
 }
 
-.nav__btn {
-    display: flex;
-    align-items: center;
-    min-height: var(--size-l);
-    background-color: transparent;
-    border: none;
-}
-
-.nav__btn:hover {background-color: var(--clr-neutral);}
-
 .nav__list--hidden {display: none;}
 
 .nav__logo {
@@ -153,15 +143,16 @@ nav {
 .btn--primary {
     min-height: var(--size-l);
     padding: 0 var(--size-s);
-    background-color: var(--clr-4);
-    border: 1.5px solid var(--clr-4);
+    background-color: var(--clr-2);
+    border: 1.5px solid var(--clr-2);
 }
 
 .btn--secondary {
     min-height: var(--size-l);
     padding: 0 var(--size-s);
-    background-color: var(--clr-light);
-    border: 1.5px solid var(--clr-4);
+    min-height: var(--size-l);
+    background-color: transparent;
+    border: 1.5px solid var(--clr-2);
 }
 
 .btn--primary:hover, .btn--secondary:hover {
