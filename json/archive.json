@@ -5,7 +5,9 @@
     "categories": [
         {
         "name": "read",
-        "entries": ["Fame, Daniel Kehlmann ✓", "Nightfall and other stories, Asimov"]
+        "entries": [
+          "Fame, Daniel Kehlmann ✓", 
+          "Nightfall and other stories, Asimov"]
         },
         {
         "name": "playing",
@@ -42,6 +44,7 @@
         {
           "name": "watched",
           "entries": [
+            "***"
           ]
         }
       ]
@@ -52,15 +55,6 @@
         {
           "name": "read",
           "entries": [
-            "Orbital, Samantha Harvey ✓",
-            "Mord im Orient Express, A. Christie ✓",
-            "Maame, Jessica George ✓",
-            "La terra, il cielo, i corvi GN ✓",
-            "Non stancarti di andare GN ✓",
-            "Wild Thoughts from wild Places, -",
-            "Homo Faber, -",
-            "Poirot erste Fälle",
-            "**august: fame, kahnemann",
             "Childhood's end, Arthur Clarke ✓",
             "West, West Texas, Tillie Walden (GN) ✓",
             "Randevouz with Rama, Arthur Clarke ✓",
@@ -82,7 +76,6 @@
         {
           "name": "watched",
           "entries": [
-            "**august: firefly",
             "Long way home <3",
             "Spotlilght"
           ]
@@ -108,7 +101,8 @@
         {
           "name": "playing",
           "entries": [
-            "UFO 50"
+            "UFO 50",
+            "it takes two"
           ]
         },
         {
