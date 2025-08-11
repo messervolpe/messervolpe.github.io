@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Prompts</title>
+    <title>Shapes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- style -->
-    <link href="css/old-style.css" rel="stylesheet">
-    
-    
+    <link href="css/styles.css" rel="stylesheet">
     <!-- font links -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
 </head>
-
-<body class="l-stack--xl clr-style-1">
-
-  <header>
-      <a href="index.html" class="logo">
-          <h1>m/v</h1>
-      </a>
-      <h2 class="h2--page">Shapes generator</h2> 
-  </header>
-
-  <main class="l-stack--xl l-flex-column">
-
-    <div class="l-flex l-flex-align">
-      <input type="range" min="5" max="25" value="12" class="slider js-slider">
-      <p>Corners: <output id="value"></output></p>
-      
-    </div>
-      
-    <svg width="380px" height="380px" style="display: block;">
-        <path class="js-path" fill="#3a60cb" d="M 380 0 L 380 380 L 0 380 L 0 0 Z" />
-    </svg>
-
-    <button type="button" class="c-btt--primary js-make-shape">Generate</button> 
-  </main>
-
-</body>
+<body>
+    <header class="card card--s">
+            <a href="index.html" class="nav__logo">m/v</a>
+            <nav>
+                <button class="btn--secondary nav__btn js-nav-btn">+ menu</button>
+                <ul class="js-nav">
+                    <li><a href="index.html" class="nav__link"><span class="">homepage</span></a></li>
+                    <li><a href="archive.html" class="nav__link"><span class="">archive</span></a></li>
+                    <li><a href="prompts.html" class="nav__link"><span class="">prompts</span></a></li>
+                    <li><a href="shapes.html" class="nav__link"><span class="nav__link--active">shapes</span></a></li>
+                    <li><a href="calculator.html" class="nav__link"><span class="">calculator</span></a></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="card card--m stack--m">
+      <div class="page__header">
+          <h1>shapes</h1>  
+        </div>
+        <svg width="380px" height="380px" style="display: block;" class="m-auto">
+                <path class="js-path" fill="#2C313A" d="M 380 0 L 380 380 L 0 380 L 0 0 Z"/>
+        </svg>
+        <div class="l-flex">
+            <div>
+                 <label for="value">complexity</label>
+             <select id="value" class="js-corner-select">
+                    <option value="5">5 corners</option>
+                    <option value="8">8 corners</option>
+                    <option value="12">12 corners</option>
+                    <option value="20">20 corners</option>
+                </select> 
+            </div>
+                <button class="btn--primary js-create-shape">generate</button>
+        </div>
+    </main>
 
 <script>
 
-const Shape = document.querySelector(".js-path");
-const value = document.querySelector("#value");
-value.textContent = document.querySelector(".js-slider").value;
-
-let Points = 25;
+let Shape = document.querySelector(".js-path");
+const btnShape = document.querySelector(".js-create-shape");
+let selectCorners = document.querySelector(".js-corner-select")
+let corners = selectCorners.value
 
 function randomPairsArray(length, min, max) {
   return Array.from({ length }, () => [
@@ -53,15 +59,13 @@ function randomPairsArray(length, min, max) {
   ]);
 }
 
-function updatePoints() {
-  Points = document.querySelector(".js-slider").value;
-  value.textContent = document.querySelector(".js-slider").value;
-  
+function updateCorners() {
+  corners = selectCorners.value
 }
 
-function makeShape() {
+function createShape() {
 
-    const newCoordinates = randomPairsArray(Points, 20, 380);
+    const newCoordinates = randomPairsArray(corners, 20, 380);
     const newPathData = newCoordinates.map(pair => pair.join(' ')).join(' L ');
 
     newPath = `M ${newPathData} Z`;
@@ -69,17 +73,15 @@ function makeShape() {
     Shape.setAttribute("d", newPath);
 }
 
-const bttRange = document.querySelector(".js-slider");
 
-bttRange.addEventListener("input", updatePoints);
+selectCorners.addEventListener("change", updateCorners);
 
-const bttShape = document.querySelector(".js-make-shape");
-
-bttShape.addEventListener("click", makeShape);
+btnShape.addEventListener("click", createShape);
 
 
 </script>
 
+<script type="text/javascript" src="js/nav.js"></script>
+</body>
 
 </html>
-
