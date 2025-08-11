@@ -209,6 +209,10 @@ details[open] summary::marker {
     input, select, .btn--primary, .btn--secondary {
         width:100%;
     }
+
+    .nav__btn {
+        width: fit-content;
+    }
 }
 
 @media (min-width: 700px) {
