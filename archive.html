@@ -27,13 +27,15 @@
     <main class="card card--m stack--m">
         <div class="page__header">
                 <h1>archive</h1>
-                <button class="btn--secondary">open all</button>
+                <button class="btn--secondary js-open">open all</button>
             </div>
         <div class="js-arc-list stack--l"></div>
     </main>
     <script>
 
         let arcList = document.querySelector(".js-arc-list")
+        let btnOpen = document.querySelector(".js-open");
+        let monthAccordions = ""
         let monthList = ""
 
         fetch('json/archive.json')
@@ -75,10 +77,28 @@
             arcList.innerHTML = monthList
             let currentMonth = document.querySelector("details")
             currentMonth.setAttribute("open", "")
-            console.log(currentMonth)
 
-            })
+            monthAccordions = document.querySelectorAll("details")
 
+
+            function toggleAccordions() {
+            if (btnOpen.innerText == "open all") {
+                for (let i = 0; i < monthAccordions.length; i++) {
+                monthAccordions[i].setAttribute("open", "")
+                btnOpen.innerText = "close all"
+            }}
+            else {
+                for (let i = 0; i < monthAccordions.length; i++) {
+                monthAccordions[i].removeAttribute("open", "")
+                btnOpen.innerText = "open all"
+             }
+            }
+             
+            }
+
+            btnOpen.addEventListener('click', toggleAccordions)
+
+        })
     </script>
     <script type="text/javascript" src="js/nav.js"></script>
 

@@ -28,8 +28,8 @@
       <div class="page__header">
           <h1>shapes</h1>  
         </div>
-        <svg width="380px" height="380px" style="display: block;" class="m-auto">
-                <path class="js-path" fill="#2C313A" d="M 380 0 L 380 380 L 0 380 L 0 0 Z"/>
+        <svg width=300px height=300px style="display: block; margin: 24px auto">
+                <path class="js-path" fill="#2C313A" d="M 300 0 L 300 300 L 0 300 L 0 0 Z"/>
         </svg>
         <div class="l-flex">
             <div>
@@ -65,7 +65,7 @@ function updateCorners() {
 
 function createShape() {
 
-    const newCoordinates = randomPairsArray(corners, 20, 380);
+    const newCoordinates = randomPairsArray(corners, 20, 300);
     const newPathData = newCoordinates.map(pair => pair.join(' ')).join(' L ');
 
     newPath = `M ${newPathData} Z`;
