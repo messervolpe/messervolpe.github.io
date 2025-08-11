@@ -60,7 +60,7 @@ button {cursor: pointer;}
 /* Styles */
 
 body {
-    background-color: var(--clr-neutral);
+    background-color: var(--clr-dark);
     font-family: "Azeret Mono", monospace;
     font-size: 0.875rem;
     line-height: 1.4286; 
@@ -143,8 +143,9 @@ nav {
 .btn--primary {
     min-height: var(--size-l);
     padding: 0 var(--size-s);
-    background-color: var(--clr-2);
-    border: 1.5px solid var(--clr-2);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    border: 1.5px solid var(--clr-dark);
 }
 
 .btn--secondary {
@@ -152,7 +153,7 @@ nav {
     padding: 0 var(--size-s);
     min-height: var(--size-l);
     background-color: transparent;
-    border: 1.5px solid var(--clr-2);
+    border: 1.5px solid var(--clr-dark);
 }
 
 .btn--primary:hover, .btn--secondary:hover {
