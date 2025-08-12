@@ -10,11 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
 </head>
-<body>
-    <header class="card card--s">
+<body class="flex--desk items--start--desk">
+    <header class="card card--s flex justify--space-between flex--col--desk items--center--desk">
             <a href="index.html" class="nav__logo">m/v</a>
-            <nav>
-                <button class="nav__btn js-nav-btn"><img class="js-iconNav" src="svg/menu-open.svg" alt=""></button>
+            <nav class="flex--col items--end items--center--desk">
+                <button class="btn--icon js-nav-btn"><img class="js-iconNav" src="svg/menu-open.svg" alt=""></button>
                 <ul class="js-nav">
                     <li><a href="index.html" class="nav__link"><span class="">homepage</span></a></li>
                     <li><a href="archive.html" class="nav__link"><span class="">archive</span></a></li>
@@ -24,14 +24,12 @@
                 </ul>
             </nav>
     </header>
-    <main class="card card--m stack--m">
-      <div class="page__header">
-          <h1>shapes</h1>  
-        </div>
+    <main class="card card--m">
+        <h1>shapes</h1>  
         <svg width=300px height=300px style="display: block; margin: 24px auto">
                 <path class="js-path" fill="#2C313A" d="M 300 0 L 300 300 L 0 300 L 0 0 Z"/>
         </svg>
-        <div class="l-flex">
+        <div class="flex items--end justify--center gap--s">
             <div>
                  <label for="value">complexity</label>
              <select id="value" class="js-corner-select">
