@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Shapes</title>
+    <title>Prompts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- style -->
-    <link href="css/styles.css" rel="stylesheet">
-    <!-- font links -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-</head>
-<body class="flex--desk items--start--desk justify--center--desk">
-    <header class="card card--s flex justify--space-between flex--col--desk items--center--desk">
-            <a href="index.html" class="nav__logo">m/v</a>
-            <nav class="flex--col items--end items--center--desk">
-                <button class="btn--icon js-nav-btn"><img class="js-iconNav" src="svg/menu-open.svg" alt=""></button>
-                <ul class="js-nav">
-                    <li><a href="index.html" class="nav__link"><span class="">homepage</span></a></li>
-                    <li><a href="archive.html" class="nav__link"><span class="">archive</span></a></li>
-                    <li><a href="prompts.html" class="nav__link"><span class="">prompts</span></a></li>
-                    <li><a href="shapes.html" class="nav__link"><span class="nav__link--active">shapes</span></a></li>
-                    <li><a href="calculator.html" class="nav__link"><span class="">calculator</span></a></li>
-                </ul>
-            </nav>
-    </header>
-    <main class="card card--m stack--m">
-        <h1>prompts</h1>
-        <div class="container flex--col items--center gap--s">
-        <p class="container__text--strong js-prompt-1">Prompt 1</p>
-        <p class="container__text--strong">+</p>
-        <p class="container__text--strong js-prompt-2">Prompt 2</p>
-        </div>
-        <button class="btn--primary m--center js-generate">new prompts</button>
-        
-    </main>
 
-<script type="text/javascript" src="js/nav.js"></script>
-<script>  
+    <!-- style -->
+    <link href="css/old-style.css" rel="stylesheet">
+    
+    
+    <!-- font links -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body class="l-stack--xl clr-style-2">
+
+  <header>
+      <a href="index.html" class="logo">
+          <h1>m/v</h1>
+      </a>
+      <h2 class="h2--page">Prompts generator</h2> 
+  </header>
+
+
+  <main class="l-stack--xl txt-center">
+
+    <section class="l-stack--m l-cont-dashed u-2col-container">
+
+      <div class="fs-600 u-2col-group">
+        <p class="js-prompt-1">Prompt 1</p>
+        <p class="">+</p>
+        <p class="js-prompt-2">Prompt 2</p>
+      </div>
+      
+      <button class="c-btt--primary js-generate"> New prompts !</button>
+
+    </section>
+    
+    <section class="l-stack--m l-cont-dashed">
+      <p class="fs-700"><span class="js-minutes">05</span>:<span class="js-seconds">00</span></p>
+      <button class="c-btt--primary js-start-stop">Start</button>
+      <button class="c-btt--secondary js-reset">Reset</button>
+      <label class="sr-only" for="time-select">/ Timer</label>  
+      <select id="time-select" class="js-timer" autocomplete="off">
+        <option value="300">5 Minutes</option>
+        <option value="180">3 Minutes</option>
+        <option value="60">1 Minute</option>
+      </select>
+    </section>
+
+
+  </main>
+
+    <script>  
 
     /* ------------------- */
     /* PROMPTS             */
@@ -63,6 +78,75 @@
     const bttPrompts = document.querySelector(".js-generate");
 
     bttPrompts.addEventListener("click", GetPrompts)
-</script>
+
+
+    /* ------------------- */
+    /* TIMER               */
+    /* ------------------- */
+
+    const minutes = document.querySelector(".js-minutes");
+    const seconds = document.querySelector(".js-seconds");
+
+    const bttStartStop = document.querySelector(".js-start-stop");
+    const bttReset = document.querySelector(".js-reset");
+    
+
+    let TimerTime = document.querySelector(".js-timer").value;
+    let interval;
+
+    function NewTimer() {
+      TimerTime = document.querySelector(".js-timer").value;
+      isRunning = false;
+      clearInterval(interval);
+      minutes.innerText = "0" + Math.floor(TimerTime / 60);
+      seconds.innerText = "00";
+      bttStartStop.innerText = 'Start';
+    }
+
+    function toggleStartStop() {
+      if (bttStartStop.innerText === "Start") {
+        isRunning = true;
+        interval = setInterval(decrementTimer, 1000)
+        bttStartStop.innerText = 'Stop';
+      } else {
+        isRunning = false;
+        clearInterval(interval);
+        bttStartStop.innerText = 'Start';
+      }
+    }
+
+    const TimeSelect = document.querySelector(".js-timer");
+    TimeSelect.addEventListener("change", newTime = () => {
+      NewTimer();})
+
+    const pad = (number) => {
+      return (number < 10) ? '0' + number : number;
+    }
+
+    const decrementTimer = () => {
+      TimerTime--;
+  
+      const numberMinutes = Math.floor(TimerTime / 60);
+      const numberSeconds = TimerTime % 60;
+  
+      minutes.innerText = pad(numberMinutes);
+      seconds.innerText = pad(numberSeconds);
+
+      if (TimerTime == 0) {
+        NewTimer();
+        alert("Time is up!")
+      }
+
+    }
+
+    bttStartStop.addEventListener('click', toggleStartStop);
+
+    bttReset.addEventListener('click', NewTimer);
+
+    </script>
+
+
+
 </body>
+
 </html>

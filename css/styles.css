@@ -71,6 +71,8 @@ button {cursor: pointer;}
 
 .gap--s {gap: var(--size-s);}
 
+.m--center {margin: 12px auto;}
+
 
 /*
 * === TYPOGRAPHY ===
@@ -121,6 +123,16 @@ body {
     border-bottom: 2px dashed var(--clr-dark);
 }
 
+.container {
+    padding: var(--size-l);
+    background-color: var(--clr-neutral);
+}
+.container__text--strong {
+    font-size: 1.5rem;
+    line-height: 100%;
+    font-weight: 800;
+}
+
 /* — navi — */
 
 .nav__list--hidden {display: none;}
@@ -158,6 +170,7 @@ body {
 /* — buttons — */
 
 .btn--primary {
+    display: block;
     min-height: var(--size-l);
     padding: 0 var(--size-s);
     color: var(--clr-light);
@@ -166,9 +179,9 @@ body {
 }
 
 .btn--secondary {
+    display: block;
     min-height: var(--size-l);
     padding: 0 var(--size-s);
-    min-height: var(--size-l);
     background-color: transparent;
     border: 2px solid var(--clr-dark);
 }
