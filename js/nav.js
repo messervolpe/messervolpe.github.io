@@ -8,11 +8,11 @@ nav.classList.add("nav__list--hidden");
 
 function toggleNav() {
     nav.classList.toggle("nav__list--hidden");
-    if (iconNav.getAttribute('src') == "svg/menu-open.svg") {
-        iconNav.setAttribute('src', "svg/close.svg")
+    if (iconNav.getAttribute('src') == "img/menu-open.svg") {
+        iconNav.setAttribute('src', "img/close.svg")
     }
     else {
-        iconNav.setAttribute('src', "svg/menu-open.svg")
+        iconNav.setAttribute('src', "img/menu-open.svg")
     }
 }
 

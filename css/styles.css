@@ -54,7 +54,7 @@ button {cursor: pointer;}
 .stack--xs > * + * { margin-block-start: var(--size-xs);}
 .stack--s > * + * { margin-block-start: var(--size-s);}
 .stack--m > * + * { margin-block-start: var(--size-m);}
-.stack--l > * + * { margin-block-start: var(--size-m);}
+.stack--l > * + * { margin-block-start: var(--size-l);}
 
 .flex {display: flex;}
 .flex--col {display: flex; flex-direction: column;}

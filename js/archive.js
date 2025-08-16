@@ -16,10 +16,10 @@ fetch('json/archive.json')
         
         for (let category of month.categories) {
 
-            categoryName = category.name
+            let categoryName = category.name
             let entryList = ""
 
-            for (entry of category.entries) {
+            for (let entry of category.entries) {
                 let entryItem = "<li>" + entry + "</li>"
                 entryList += entryItem
             }
@@ -40,7 +40,10 @@ fetch('json/archive.json')
             `
     }
 
-    arcList.innerHTML = monthList
+    let tpl = document.createElement("template");
+    tpl.innerHTML = monthList;
+    arcList.appendChild(tpl.content)
+
     let currentMonth = document.querySelector("details")
     currentMonth.setAttribute("open", "")
 
