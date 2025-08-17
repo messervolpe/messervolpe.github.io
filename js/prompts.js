@@ -20,8 +20,8 @@ function GetPrompts()
     if (prompt1 === prompt2) {
         const prompt2 = allPrompts[Math.floor(Math.random() * allPrompts.length)];
     } else {
-        document.querySelector(".js-prompt-1").innerText=prompt1;
-        document.querySelector(".js-prompt-2").innerText=prompt2;
+        document.querySelector(".js-prompt-1").textContent=prompt1;
+        document.querySelector(".js-prompt-2").textContent=prompt2;
     }
 };
 
