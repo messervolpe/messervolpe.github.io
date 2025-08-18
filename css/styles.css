@@ -42,7 +42,7 @@ img, picture {
 input, button, textarea, select {
     font: inherit;
     color: var(--clr-dark);
-    min-width: 0;
+    /* width: 0; not working with flex in calc */
 }
 
 button {cursor: pointer;}
