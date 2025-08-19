@@ -26,23 +26,42 @@
     <main class="card card--m stack--m">
         <h1>calculator</h1>
         <div class="container container--m container__text--strong flex--col items--center gap--s">
-            <p class="">new Amount: <span><output for="a b c" id="result">0</output></span></p>
+            <p class="">new amount: <span><output for="a b c" id="result">0</output></span></p>
         </div>
         <div class="flex gap--s">
             <div style="flex: 1 1 auto; width: 100%;" >
-                <label for="input1">Portions</label>
-                <input style="width: 100%;" type="text" id="input1">
+                <label for="input1">old portions</label>
+                <input type="number" id="b" style="width: 100%;" type="text" id="input1">
             </div>
             <div style="flex: 1 1 auto; width: 100%;">
-                <label for="input1">Portions</label>
-                <input style="width: 100%;" type="text" id="input1">
+                <label for="input1">new portions</label>
+                <input type="number" id="c" style="width: 100%;" type="text" id="input1">
             </div>
             <div style="flex: 1 1 auto; width: 100%;">
-                <label for="input1">Amount</label>
-                <input style="width: 100%;" type="text" id="input1">
+                <label for="input1">old amount</label>
+                <input type="number" id="a" style="width: 100%;" type="text" id="input1">
             </div>
         </div>
     </main> 
 <script type="text/javascript" src="js/nav.js"></script>
+<script>
+    const form = document.querySelector(".js-calculator");
+    const a = form.elements["a"];
+    const b = form.elements["b"];
+    const c = form.elements["c"];
+    const result = form.elements["result"];
+    
+    function updateResult() {
+        const aValue = parseInt(a.value);
+        const bValue = parseInt(b.value);
+        const cValue = parseInt(c.value);
+        result.value = aValue*cValue/bValue;
+    }
+    
+    form.addEventListener("input", updateResult);
+    
+    updateResult();
+
+</script>
 </body>
 </html>
