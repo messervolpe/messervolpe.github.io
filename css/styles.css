@@ -42,7 +42,7 @@ img, picture {
 input, button, textarea, select {
     font: inherit;
     color: var(--clr-dark);
-    min-width: 0;
+    /* width: 0; not working with flex in calc */
 }
 
 button {cursor: pointer;}
@@ -124,9 +124,17 @@ body {
 }
 
 .container {
-    padding: var(--size-l);
     background-color: var(--clr-neutral);
 }
+
+.container--l {
+    padding: var(--size-l);
+}
+
+.container--m {
+    padding: var(--size-m);
+}
+
 .container__text--strong {
     font-size: 1.5rem;
     line-height: 100%;

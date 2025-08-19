@@ -4,61 +4,64 @@
     <title>Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- style -->
-    <link href="css/old-style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <!-- font links -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
 </head>
-
-<body class="l-stack--xl clr-style-1">
-
-    <header>
-        <a href="index.html" class="logo">
-            <h1>m/v</h1>
-        </a>
-        <h2 class="h2--page">Calculators</h2> 
-    </header>
-
-    <main class="l-stack--xxl">
-
-        <section class="l-stack--l">
-            <h3>/ Quantity</h3>
-
-            <form class="l-stack--m cal-container js-calculator txt-center">
-            
-            <div class="cal-group">
-                <input type="number" id="a" placeholder="Current quantity" class="cal-item">
-                <input type="number" id="b" placeholder="Current portions" class="cal-item">
+<body class="flex--desk items--start--desk justify--center--desk">
+    <header class="card card--s flex justify--space-between flex--col--desk items--center--desk">
+            <a href="index.html" class="nav__logo">M/V</a>
+            <nav class="flex--col items--end items--center--desk">
+                <button class="btn--icon js-nav-btn"><img class="js-iconNav" src="img/menu-open.svg" alt=""></button>
+                <ul class="js-nav">
+                    <li><a href="index.html" class="nav__link"><span class="">archive</span></a></li>
+                    <li><a href="prompts.html" class="nav__link"><span class="">prompts</span></a></li>
+                    <li><a href="shapes.html" class="nav__link"><span class="">shapes</span></a></li>
+                    <li><a href="calculator.html" class="nav__link"><span class="nav__link--active">calculator</span></a></li>
+                </ul>
+            </nav>
+    </header>   
+    <main class="card card--m stack--l">
+        <h1>calculator</h1>
+        <form class="js-calculator stack--m">
+            <div class="container container--m container__text--strong flex--col items--center gap--s">
+            <p class="">new amount: <span><output for="a b c" id="result">0</output></span></p>
             </div>
-
-            <p>equal to</p>
-
-            <div class="cal-group">
-                <div class="l-cont-dashed calc-output-cont cal-item"><output for="a b c" id="result">0</output></div>
-                <input type="number" id="c" placeholder="New Portions" class="cal-item">
-            </div>
-
-            </form>
-            
-        </section>
-        
-        <section class="l-stack--l">
-            <h3>/ Dates</h3>
-            <form class="l-stack--m cal-container js-dates">
-                <div class="cal-group">
-                    <input type="date" class=" cal-item js-start-date">
-                    <input type="date" class="cal-item js-end-date">
-                    <output for="js-start-date js-end-date" class="l-cont-dashed cal-item js-days-passed txt-center">0</output>
+            <div class="flex gap--s">
+                <div style="flex: 1 1 auto; width: 100%;" >
+                    <label for="b">old portions</label>
+                    <input type="number" id="b" style="width: 100%;">
                 </div>
-            </form>
-        </section>
+                <div style="flex: 1 1 auto; width: 100%;">
+                    <label for="c">new portions</label>
+                    <input type="number" id="c" style="width: 100%;">
+                </div>
+                <div style="flex: 1 1 auto; width: 100%;">
+                    <label for="a">old amount</label>
+                    <input type="number" id="a" style="width: 100%;">
+                </div>
+            </div>
+        </form>
+
+         <form class="js-dates stack--m">
+
+            <div class="container container--m container__text--strong flex--col items--center gap--s">
+            <p class="">days since: <span><output for="js-start-date js-end-date" class="js-days-passed">0</output></span></p>
+            </div>
+
+            <div class="flex gap--s">
+                <input type="date" class="js-start-date" style="width: 100%;">
+                <input type="date" class="js-end-date" style="width: 100%;">
+            </div>
+        </form>
 
 
-    </main>
 
-
-    <script>
-
-    
+    </main> 
+<script type="text/javascript" src="js/nav.js"></script>
+<script>
     const form = document.querySelector(".js-calculator");
     const a = form.elements["a"];
     const b = form.elements["b"];
@@ -76,9 +79,8 @@
     
     updateResult();
 
-    //Dates
-    
-    const datesForm = document.querySelector(".js-dates");
+
+        const datesForm = document.querySelector(".js-dates");
     let StartDate = document.querySelector(".js-start-date");
     let EndDate = document.querySelector(".js-end-date");
     const DaysPassed = document.querySelector(".js-days-passed");
@@ -96,38 +98,11 @@
 
         const DifferenceDays = Math.round (DifferenceTime / (1000 * 3600 * 24));
 
-        DaysPassed.innerText = DifferenceDays;
+        DaysPassed.textContent = DifferenceDays;
     }
 
     datesForm.addEventListener("input", CalculateDays);
 
-    
-
-    
-
-
-    // function CalculateDays() {
-
-    //     secondDate = EndDate
-
-    //     // dt1 = Date.UTC(StartDate.getFullYear(), startDate.getMonth(), startDate.getDate());
-    //     // dt2 = Date.UTC(endDate.getFullYear(), endDate.getMonth(), endDate.getDate());
-
-    //     // DaysPassed.innerHTML = Math.abs((dt1.valueOf() - dt2.valueOf()) / (24 * 60 * 60 * 1000));
-
-    //     DaysPassed.innerText = secondDate.value;
-        
-    // }
-
-    // 
-       
-
-    </script>    
-
+</script>
 </body>
-
 </html>
-
-
-            
-       
