@@ -23,9 +23,11 @@
                 </ul>
             </nav>
     </header>   
-    <main class="card card--m stack--l">
+    <main class="card card--m stack--m">
         <h1>calculator</h1>
-        <form class="js-calculator stack--m">
+        <section class="stack--s section--first">
+            <h3>Quantity</h3>
+            <form class="js-calculator stack--s">
             <div class="container container--m container__text--strong flex--col items--center gap--s">
             <p class="">new amount: <span><output for="a b c" id="result">0</output></span></p>
             </div>
@@ -44,23 +46,27 @@
                 </div>
             </div>
         </form>
-
-        <hr>
-
-         <form class="js-dates stack--m">
-
-            <div class="container container--m container__text--strong flex--col items--center gap--s">
-            <p class="">days since: <span><output for="js-start-date js-end-date" class="js-days-passed">0</output></span></p>
-            </div>
-
-            <div class="flex gap--s">
-                <input type="date" class="js-start-date" style="width: 100%;">
-                <input type="date" class="js-end-date" style="width: 100%;">
-            </div>
+        </section>
+        <section class="stack--s">
+            <h3>Time</h3>
+             <form class="js-dates stack--s">
+                <div class="container container--m container__text--strong flex--col items--center gap--s">
+                <p class="">days since: <span><output for="js-start-date js-end-date" class="js-days-passed">0</output></span></p>
+                </div>
+                <div class="flex gap--s">
+                    <div style="flex: 1 1 auto; width: 100%;">
+                        <label for="first-date">first date</label>
+                        <input type="date" id="first-date" class="js-start-date" style="width: 100%;">
+                    </div>
+                    <div style="flex: 1 1 auto; width: 100%;">
+                        <label for="second-date">second date</label>
+                        <input type="date" id="second-date" class="js-end-date" style="width: 100%;">
+                    </div>
+                    
+                    
+                </div>
         </form>
-
-
-
+        </section>
     </main> 
 <script type="text/javascript" src="js/nav.js"></script>
 <script  type="text/javascript" src="js/calculator.js"></script>
