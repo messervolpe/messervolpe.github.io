@@ -1,3 +1,5 @@
+//Amount
+
 let form = document.querySelector(".js-calculator");
 let a = form.elements["a"];
 let b = form.elements["b"];
@@ -9,12 +11,16 @@ function updateResult() {
     let bValue = parseInt(b.value);
     let cValue = parseInt(c.value);
     let newValue = aValue*cValue/bValue
-    result.value = newValue.toFixed(2)
+    result.value = Math.round(newValue * 100) / 100
 }
 
 form.addEventListener("input", updateResult);
 
-updateResult();
+
+
+
+
+//Timer
 
 
 let datesForm = document.querySelector(".js-dates");

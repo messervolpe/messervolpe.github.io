@@ -75,6 +75,10 @@ button {cursor: pointer;}
 
 .m--center {margin: 12px auto;}
 
+.w--full {width: 100%;}
+
+.flex__child--full {flex: 1 1 auto;}
+
 
 
 /*
@@ -145,7 +149,7 @@ body {
     text-align: center;
 }
 
-.section--first {margin-bottom: var(--size-l);}
+.bottom-extra {margin-bottom: var(--size-l);}
 
 /* — navi — */
 
