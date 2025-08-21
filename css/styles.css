@@ -121,7 +121,7 @@ body {
 
 .card {
     background-color: var(--clr-light);
-    padding: var(--size-s);
+    padding: var(--size-m) var(--size-s);
 }
 
 .card--s {
