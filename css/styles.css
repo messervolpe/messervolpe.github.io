@@ -121,7 +121,7 @@ body {
 
 .card {
     background-color: var(--clr-light);
-    padding: var(--size-m) var(--size-s);
+    padding: var(--size-s);
 }
 
 .card--s {
@@ -129,6 +129,8 @@ body {
     top: 0;
     border-bottom: 2px dashed var(--clr-dark);
 }
+
+.card--m {padding-bottom: var(--size-m;}
 
 .container {
     background-color: var(--clr-neutral);
