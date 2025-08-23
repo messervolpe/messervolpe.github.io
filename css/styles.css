@@ -273,15 +273,6 @@ details[open] summary::marker {
     content: "- ";
 }
 
-.dice {
-    transition: transform 0.3s ease;
-    transform-origin: center;
-}
-
-.shrink {
-  transform: scale(0.5);
-  transform: scale(1);
-}
 
 
 

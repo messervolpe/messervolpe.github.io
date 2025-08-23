@@ -40,10 +40,11 @@ function actionRoll() {
     d10_1.textContent = d10_1Rolled;
     d10_2.textContent = d10_2Rolled;
 
+    if (d10_1Rolled == d10_2Rolled) {
+    rollResult.textContent += " with match!";
+}
 }
 
-if (d10_1Rolled == d10_2Rolled) {
-    rollResults.textContent += " with a match!";
-}
+
 
 btnRoll.addEventListener("click", actionRoll);
