@@ -130,6 +130,11 @@ body {
     border-bottom: 2px dashed var(--clr-dark);
 }
 
+
+.card--m {
+    padding-bottom: var(--size-m);
+}
+
 .container {
     background-color: var(--clr-neutral);
 }
