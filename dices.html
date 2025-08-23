@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Archive</title>
+    <title>Dices</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- style -->
     <link href="css/styles.css" rel="stylesheet">
@@ -16,41 +16,33 @@
             <nav class="flex--col items--end items--center--desk">
                 <button class="btn--icon js-nav-btn"><img class="js-iconNav" src="img/menu-open.svg" alt=""></button>
                 <ul class="js-nav">
-                    <li><a href="index.html" class="nav__link"><span class="nav__link--active">archive</span></a></li>
+                    <li><a href="index.html" class="nav__link"><span class="">archive</span></a></li>
                     <li><a href="prompts.html" class="nav__link"><span class="">prompts</span></a></li>
                     <li><a href="shapes.html" class="nav__link"><span class="">shapes</span></a></li>
                     <li><a href="calculator.html" class="nav__link"><span class="">calculator</span></a></li>
-                    <li><a href="dices.html" class="nav__link"><span class="">dices</span></a></li>
+                    <li><a href="dices.html" class="nav__link"><span class="nav__link--active">dices</span></a></li>
                 </ul>
             </nav>
     </header>
     <main class="card card--m stack--m">
-            <div class="flex flex--wrap justify--space-between items--start">
-                <h1>archive</h1>
-                <button class="btn--secondary js-open">open all</button>
+        <h1>dices</h1>
+        <section class="stack--s bottom-extra">
+            <h3>Action roll<span class="js-roll-result" style="font-weight: 600;"></span></h3>
+            <div class="container container--m container__text--strong flex items--center justify--center gap--s">
+                <p class="dice js-ar-d6">D6</p>
+                <p class="dice js-ar-d10-1">D10</p>
+                <p class=" dice js-ar-d10-2">D10</p>
             </div>
-        <div class="js-arc-list stack--m"></div>
-    </main>
-    <script type="text/javascript" src="js/nav.js"></script>
-    <script type="text/javascript" src="js/archive.js"></script>
-
-    <!-- {
-    "name": "MonthName",
-    "categories": [
-        {
-        "name": "read",
-        "entries": ["**"]
-        },
-        {
-        "name": "playing",
-        "entries": ["**"]
-        },
-        {
-        "name": "watched",
-        "entries": ["**"]
-        }
-    ]
-    } -->
-
+            <div class="flex gap--s items--end justify--center">
+                 <div>
+                    <label for="stats">stats</label>
+                    <input type="number" id="stats" size="4" class="js-stats">
+                </div>
+                <button class="btn--primary js-roll-dices">roll</button>
+            </div>
+        </section>
+    </main>  
+<script type="text/javascript" src="js/nav.js"></script>
+<script type="text/javascript" src="js/dices.js"></script>
 </body>
 </html>

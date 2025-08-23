@@ -27,5 +27,4 @@ function GetPrompts()
 
 
 const bttPrompts = document.querySelector(".js-generate");
-
 bttPrompts.addEventListener("click", GetPrompts)
