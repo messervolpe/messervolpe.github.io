@@ -11,7 +11,14 @@ function updateResult() {
     let bValue = parseInt(b.value);
     let cValue = parseInt(c.value);
     let newValue = aValue*cValue/bValue
-    result.value = Math.round(newValue * 100) / 100
+    let newResult = Math.round(newValue * 100) / 100
+    
+    if (isNaN(newResult)) {
+        result.value = "x"
+    }
+    else {
+        result.value = newResult
+    }
 }
 
 form.addEventListener("input", updateResult);

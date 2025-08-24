@@ -52,6 +52,10 @@ button {cursor: pointer;}
 * === UTILITIES ===
 */
 
+.m--center {margin: 0px auto;}
+.w--full {width: 100%;}
+.text--center {text-align: center;}
+
 .stack--xs > * + * { margin-block-start: var(--size-xs);}
 .stack--s > * + * { margin-block-start: var(--size-s);}
 .stack--m > * + * { margin-block-start: var(--size-m);}
@@ -73,12 +77,7 @@ button {cursor: pointer;}
 
 .gap--s {gap: var(--size-s);}
 
-.m--center {margin: 12px auto;}
-
-.w--full {width: 100%;}
-
 .flex__child--full {flex: 1 1 auto;}
-
 
 
 /*
@@ -127,7 +126,7 @@ body {
 .card--s {
     position: sticky;
     top: 0;
-    border-bottom: 2px dashed var(--clr-dark);
+    border-bottom: 0.5px solid var(--clr-dark);
 }
 
 
@@ -274,6 +273,42 @@ details[open] summary::marker {
 }
 
 
+.dice {
+    min-width: 50px;
+    min-height: 50px;
+    border: var(--clr-dark) 0.5px solid;
+    padding: 12px 0;
+    text-justify: center;  
+    
+}
+
+.dice--d10 {
+    border-radius: 50%;
+}
+
+.dice--animated {
+  animation: bounce 0.5s infinite; 
+}
+
+.result--animated {
+    animation: bounceIn 0.5s infinite; 
+}
+
+@keyframes bounce {
+  from, to {transform: scale(1, 1);}
+  15% { transform: scale(0.2, 0.1);}
+  25% { transform: scale(0.6, 0.4);}
+  50% { transform: scale(1.1, 0.9);}
+  75% { transform: scale(0.95, 1.05);}
+  
+}
+
+@keyframes bounceIn {
+  from, to {transform: scale(1, 1);}
+  25% { transform: scale(0.9, 1.1);}
+  50% { transform: scale(1.1, 0.9);}
+  75% { transform: scale(0.95, 1.05);}
+}
 
 
 /*
@@ -307,8 +342,8 @@ details[open] summary::marker {
    .card {padding: var(--size-m);}
    .card--s {
         min-width: 160px;
-        border-right: 2px dashed var(--clr-dark);
-        border-bottom: 0px dashed var(--clr-dark);
+        border-right: 0.5px solid var(--clr-dark);
+        border-bottom: none;
     }
     .card--m {
         max-width: 750px;
