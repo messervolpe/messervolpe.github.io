@@ -17,6 +17,7 @@ let d10_2 = document.querySelector(".js-ar-d10-2");
 
 function actionRoll() {
 
+    setTimeout(function() {
     let d6Rolled = Math.floor(Math.random() * (7-1) + 1);
     let d10_1Rolled = Math.floor(Math.random() * (11-1) + 1);
     let d10_2Rolled = Math.floor(Math.random() * (11-1) + 1);
@@ -42,19 +43,20 @@ function actionRoll() {
 
     if (d10_1Rolled == d10_2Rolled) {
     rollResult.textContent += " & match";
-    }
+    }}, 400);
 
     rollResult.classList.add("result--animated")
     d6.classList.add("dice--animated")
     d10_1.classList.add("dice--animated")
     d10_2.classList.add("dice--animated")
 
+
     setTimeout(function() {
     rollResult.classList.remove("result--animated");
     d6.classList.remove("dice--animated");
     d10_1.classList.remove("dice--animated");
     d10_2.classList.remove("dice--animated");
-    }, 450);
+    }, 800);
 }
 
 
