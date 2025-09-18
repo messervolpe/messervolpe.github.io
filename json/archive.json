@@ -1,6 +1,27 @@
 {
   "months": [
     {
+    "name": "September",
+    "categories": [
+        {
+        "name": "read",
+        "entries": [
+          "The Wind in the Willows, Kenneth Grahame",
+          "Profit over people, Noam Chommsky",
+          "Global discontents, Noam Chommsky",
+          "Drei Mann in einem Boot, Jerome K. Jerome"
+        ]},
+        {
+        "name": "playing",
+        "entries": ["**"]
+        },
+        {
+        "name": "watched",
+        "entries": ["The big Lebwoski"]
+        }
+    ]
+    },
+    {
     "name": "August",
     "categories": [
         {
