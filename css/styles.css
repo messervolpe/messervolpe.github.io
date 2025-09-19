@@ -264,7 +264,7 @@ summary::marker {
     content: "+ "
 }
 
-details section {
+details div {
     padding-left: var(--size-l);
 }
 

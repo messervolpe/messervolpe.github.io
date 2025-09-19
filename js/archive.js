@@ -25,10 +25,10 @@ fetch('json/archive.json')
             }
 
             categoryList +=  `
-                <section class="stack--xs flex--desk gap--s">
+                <dev class="stack--xs flex--desk gap--s">
                     <h3 style="min-width:100px">${categoryName}</h3>
                     <ul>${entryList}</ul>
-                </section>
+                </dev>
             `
         }
 
