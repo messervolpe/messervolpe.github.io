@@ -51,7 +51,7 @@ fetch('json/archive.json')
 
 
     function toggleAccordions() {
-    if (btnOpen.innerText == "open all") {
+    if (btnOpen.innerText === "open all") {
         for (let i = 0; i < monthAccordions.length; i++) {
         monthAccordions[i].setAttribute("open", "")
         btnOpen.innerText = "close all"
