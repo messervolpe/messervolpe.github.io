@@ -55,6 +55,7 @@ button {cursor: pointer;}
 .m--center {margin: 0px auto;}
 .w--full {width: 100%;}
 .text--center {text-align: center;}
+.display--inline {display: inline;}
 
 .stack--xs > * + * { margin-block-start: var(--size-xs);}
 .stack--s > * + * { margin-block-start: var(--size-s);}
@@ -84,19 +85,19 @@ button {cursor: pointer;}
 * === TYPOGRAPHY ===
 */
 
-h1 {
+.title--l {
     font-size: 2rem;
     line-height: 125%;
     font-weight: 100;
 }
 
-h2 {
+.title--m {
     font-size: 1.5rem;
     line-height: 100%;
     font-weight: 800;
 }
 
-h3 {
+.title--s {
     font-size: 0.875rem;
     line-height: 1.4286;
     font-weight: 100;
@@ -146,12 +147,6 @@ body {
     padding: var(--size-m);
 }
 
-.container__text--strong {
-    font-size: 1.5rem;
-    line-height: 100%;
-    font-weight: 800;
-    text-align: center;
-}
 
 .bottom-extra {margin-bottom: var(--size-l);}
 

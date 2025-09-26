@@ -26,7 +26,7 @@ fetch('json/archive.json')
 
             categoryList +=  `
                 <div class="stack--xs flex--desk gap--s">
-                    <h3 style="min-width:100px">${categoryName}</h3>
+                    <h3 class="title--s" style="min-width:100px">${categoryName}</h3>
                     <ul>${entryList}</ul>
                 </div>
             `
@@ -34,7 +34,7 @@ fetch('json/archive.json')
 
         monthList += `
             <details class="stack--s">
-            <summary>${monthName}</summary>
+            <summary><h2 class="title--m display--inline">${monthName}</h2></summary>
                 ${categoryList}
             </details>
             `
