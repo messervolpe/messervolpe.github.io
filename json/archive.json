@@ -1,6 +1,27 @@
 {
   "months": [
     {
+    "name": "September",
+    "categories": [
+        {
+        "name": "read",
+        "entries": [
+          "The Wind in the Willows, Kenneth Grahame",
+          "Profit over people, Noam Chommsky",
+          "Global discontents, Noam Chommsky",
+          "Drei Mann in einem Boot, Jerome K. Jerome"
+        ]},
+        {
+        "name": "playing",
+        "entries": ["**"]
+        },
+        {
+        "name": "watched",
+        "entries": ["The big Lebwoski"]
+        }
+    ]
+    },
+    {
     "name": "August",
     "categories": [
         {
@@ -10,7 +31,7 @@
           "Nightfall and other stories, Asimov ✓",
           "Ci vediamo ad Agosto, Gabriel García Márquez ✓",
           "Caves of Steel, Asimov ✓",
-          "Naked Sun, Asimov ✓"
+          "Naked Sun, Asimov ✓", "The end of eternity, Asimov ✓"
         ]},
         {
         "name": "playing",
@@ -18,7 +39,7 @@
         },
         {
         "name": "watched",
-        "entries": ["Firefly <3 <3", "Kiki delivery service (Mattia)"]
+        "entries": ["Firefly <3 <3", "Kiki delivery service"]
         }
     ]
     },

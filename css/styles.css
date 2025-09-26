@@ -264,7 +264,7 @@ summary::marker {
     content: "+ "
 }
 
-details section {
+details div {
     padding-left: var(--size-l);
 }
 
@@ -287,27 +287,23 @@ details[open] summary::marker {
 }
 
 .dice--animated {
-  animation: bounce 0.5s infinite; 
+  animation: bounce 0.8s infinite; 
 }
 
 .result--animated {
-    animation: bounceIn 0.5s infinite; 
+    animation: bounceIn 0.8s infinite; 
 }
 
 @keyframes bounce {
-  from, to {transform: scale(1, 1);}
-  15% { transform: scale(0.2, 0.1);}
-  25% { transform: scale(0.6, 0.4);}
-  50% { transform: scale(1.1, 0.9);}
-  75% { transform: scale(0.95, 1.05);}
-  
+    20% {transform: scale(0.8);}
+    50% {transform: rotate(-20deg) scale(0.8);}
+    60% {transform: rotate(20deg) scale(0.8);}
+    70% {transform: rotate(-20deg) scale(0.8);}
+    80% {transform: rotate(0deg) scale(0.8);}  
 }
 
 @keyframes bounceIn {
-  from, to {transform: scale(1, 1);}
-  25% { transform: scale(0.9, 1.1);}
-  50% { transform: scale(1.1, 0.9);}
-  75% { transform: scale(0.95, 1.05);}
+  50%{opacity: 0%;}
 }
 
 
