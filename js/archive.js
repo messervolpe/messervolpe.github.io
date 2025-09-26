@@ -49,7 +49,6 @@ fetch('json/archive.json')
 
     monthAccordions = document.querySelectorAll("details")
 
-
     function toggleAccordions() {
     if (btnOpen.innerText === "open all") {
         for (let i = 0; i < monthAccordions.length; i++) {
