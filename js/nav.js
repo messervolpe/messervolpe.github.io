@@ -10,11 +10,11 @@ nav.classList.add("nav__list--hidden");
 function toggleNav() {
     nav.classList.toggle("nav__list--hidden");
     if (nav_hidden = true) {
-        iconNav.setAttribute('src', "img/close.svg")
+        iconNav.setAttribute('src', "img/close.svg");
         nav_hidden = false;
     }
-    else {
-        iconNav.setAttribute('src', "img/menu-open.svg")
+    else if (nav_hidden = false) {
+        iconNav.setAttribute('src', "img/menu-open.svg");
         nav_hidden = true;
     }
 }
