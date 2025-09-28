@@ -23,9 +23,11 @@
                 </ul>
             </nav>
     </header>
-    <main class="card card--m stack--m">
-        <div class="stack--s bottom-extra">
-            <h2 class="title--s">Quantity</h2>
+    <main class="card card--m stack--xl">
+        <div class="stack--m bottom-extra">
+            <div class="divider">
+                <h2 class="title--s">Quantity</h2>
+            </div>
             <form class="js-calculator stack--s">
             <div class="flex gap--s">
                 <div class="flex__child--full">
@@ -46,8 +48,10 @@
             </div>
         </form>
         </div>
-        <div class="stack--s bottom-extra">
-            <h2 class="title--s">Time</h2>
+        <div class="stack--m bottom-extra">
+            <div class="divider">
+                <h2 class="title--s">Time</h2>
+            </div>
              <form class="js-dates stack--s">
                 <div class="flex gap--s">
                     <div class="flex__child--full">
@@ -65,8 +69,18 @@
         </form>
         </div>
 
-        <div class="stack--s bottom-extra">
-            <h2 class="title--s">Action roll</h2>
+        <div class="stack--m bottom-extra">
+            <div class="divider">
+                <h2 class="title--s">Action roll</h2>
+            </div>
+            
+            <div class="flex gap--s items--end justify--center">
+                 <div>
+                    <label for="stats">stats</label>
+                    <input type="number" id="stats" size="4" value="1" class="js-stats">
+                </div>
+                <button class="btn--primary js-roll-dices">roll</button>
+            </div>
             <div class="container container--m stack--s">
                 <p class="text--center js-roll-result">results</p>
                 <div class="title--m flex items--center justify--center gap--s">
@@ -75,13 +89,6 @@
                 <p class="text--center dice js-ar-d10-1">D10</p>
                 <p class="text--center dice js-ar-d10-2">D10</p>
                 </div>
-            </div>
-            <div class="flex gap--s items--end justify--center">
-                 <div>
-                    <label for="stats">stats</label>
-                    <input type="number" id="stats" size="4" value="1" class="js-stats">
-                </div>
-                <button class="btn--primary js-roll-dices">roll</button>
             </div>
         </div>
 

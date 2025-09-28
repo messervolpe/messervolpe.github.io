@@ -95,7 +95,7 @@ button {cursor: pointer;}
 }
 
 .title--m {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 100%;
     font-weight: 400;
     font-family: "Luckiest Guy", cursive;
@@ -132,9 +132,9 @@ body {
 }
 
 .card--s {
-  /* position: sticky;
+  position: sticky;
   top: 0;
-  background-color: hsl(var(--clr-light), 0.6); */
+  background-color: hsl(var(--clr-light), 0.6);
 }
 
 .container {
@@ -150,6 +150,10 @@ body {
 }
 
 .bottom-extra {margin-bottom: var(--size-l);}
+
+.divider {
+    border-bottom: hsl(var(--clr-dark), 0.4) 1px solid;
+}
 
 /* — navi — */
 
@@ -174,12 +178,13 @@ body {
 @media (min-width: 700px) {.nav__link {justify-content: center;}}
 
 .nav__link--active {
-    text-decoration: overline wavy 1.2px;
+    text-decoration: underline 1.5px;
+    text-decoration: overline wavy 1.5px;
     text-decoration-color: hsl(var(--clr-1));
 }
 
 .nav__link:hover, .nav__logo:hover, .nav__link--active:hover {
-    text-decoration: overline wavy 1.2px;
+    text-decoration: overline wavy 1.5px;
     text-decoration-color: hsl(var(--clr-2));
 }
 
@@ -242,7 +247,7 @@ summary::marker {
 }
 
 details div {
-    padding-left: var(--size-l);
+    padding-left: var(--size-s);
 }
 
 details[open] summary::marker {
@@ -253,15 +258,12 @@ details[open] summary::marker {
 .dice {
     min-width: 50px;
     min-height: 50px;
-    border: hsl(var(--clr-dark)) 0.5px solid;
-    padding: 12px 0;
-    text-justify: center;  
+    border: hsl(var(--clr-dark)) 2px solid;
+    padding: 12px 12px 8px;
+    text-justify: center;
     
 }
 
-.dice--d10 {
-    border-radius: 50%;
-}
 
 .dice--animated {
   animation: bounce 0.8s infinite; 
