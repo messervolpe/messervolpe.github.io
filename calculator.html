@@ -9,30 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="img/favicon.png"> 
 </head>
-<body class="flex--desk items--start--desk justify--center--desk">
-    <header class="card card--s flex justify--space-between flex--col--desk items--center--desk">
-            <a href="index.html" class="nav__logo">M/V</a>
-            <nav class="flex--col items--end items--center--desk">
-                <button class="btn--icon js-nav-btn" aria-label="menu"><img class="js-iconNav" src="img/menu-open.svg" alt=""></button>
-                <ul class="js-nav">
-                    <li><a href="index.html" class="nav__link"><span class="">archive</span></a></li>
-                    <li><a href="prompts.html" class="nav__link"><span class="">prompts</span></a></li>
-                    <li><a href="shapes.html" class="nav__link"><span class="">shapes</span></a></li>
-                    <li><a href="calculator.html" class="nav__link"><span class="nav__link--active">calculator</span></a></li>
-                    <li><a href="dices.html" class="nav__link"><span class="">dices</span></a></li>
+<body class="">
+    <header class="card card--s flex flex--wrap justify--space-between gap--s--desk items--center">
+            <h1><a href="index.html" class="nav__logo title--m">M></a></h1>
+            <nav class="">
+                <ul class="flex gap--s js-nav">
+                    <li><a href="index.html" class="nav__link">archive</a></li>
+                    <li><a href="prompts.html" class="nav__link">drawing</a></li>
+                    <li><a href="calculator.html" class="nav__link nav__link--active">calculator</a></li>
                 </ul>
             </nav>
-    </header>   
+    </header>
     <main class="card card--m stack--m">
-        <h1 class="title--l">calculator</h1>
         <div class="stack--s bottom-extra">
             <h2 class="title--s">Quantity</h2>
             <form class="js-calculator stack--s">
-            <div class="container container--m flex--col items--center gap--s">
-            <p class="title--m">new amount: <span><output for="a b c" id="result">x</output></span></p>
-            </div>
             <div class="flex gap--s">
                 <div class="flex__child--full">
                     <label for="b">old portions</label>
@@ -47,14 +41,14 @@
                     <input type="number" id="a" class="w--full">
                 </div>
             </div>
+            <div class="container container--m flex--col items--center gap--s">
+            <p class="title--m">new amount: <span><output for="a b c" id="result">x</output></span></p>
+            </div>
         </form>
         </div>
-        <div class="stack--s">
+        <div class="stack--s bottom-extra">
             <h2 class="title--s">Time</h2>
              <form class="js-dates stack--s">
-                <div class="container container--m flex--col items--center gap--s">
-                <p class="title--m">days since: <span><output for="js-start-date js-end-date" class="js-days-passed">0</output></span></p>
-                </div>
                 <div class="flex gap--s">
                     <div class="flex__child--full">
                         <label for="first-date">first date</label>
@@ -63,14 +57,39 @@
                     <div class="flex__child--full">
                         <label for="second-date">second date</label>
                         <input type="date" id="second-date" class="w--full js-end-date">
-                    </div>
-                    
-                    
+                    </div>                    
+                </div>
+                <div class="container container--m flex--col items--center gap--s">
+                <p class="title--m">days since: <span><output for="js-start-date js-end-date" class="js-days-passed">0</output></span></p>
                 </div>
         </form>
         </div>
+
+        <div class="stack--s bottom-extra">
+            <h2 class="title--s">Action roll</h2>
+            <div class="container container--m stack--s">
+                <p class="text--center js-roll-result">results</p>
+                <div class="title--m flex items--center justify--center gap--s">
+                    <p class="text--center dice js-ar-d6">D6</p>
+                <br>
+                <p class="text--center dice js-ar-d10-1">D10</p>
+                <p class="text--center dice js-ar-d10-2">D10</p>
+                </div>
+            </div>
+            <div class="flex gap--s items--end justify--center">
+                 <div>
+                    <label for="stats">stats</label>
+                    <input type="number" id="stats" size="4" value="1" class="js-stats">
+                </div>
+                <button class="btn--primary js-roll-dices">roll</button>
+            </div>
+        </div>
+
+
+
     </main> 
 <script type="text/javascript" src="js/nav.js"></script>
 <script  type="text/javascript" src="js/calculator.js"></script>
+<script type="text/javascript" src="js/dices.js"></script>
 </body>
 </html>

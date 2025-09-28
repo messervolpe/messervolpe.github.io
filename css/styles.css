@@ -1,9 +1,11 @@
 :root {
     /*colors*/
-    --clr-dark: #2C313A;
-    --clr-neutral: #F3F1EF;
-    --clr-light: #FEFEFE;
-    --clr-1: #D6DBF1;
+    --clr-dark: 29, 1%, 20%;
+    --clr-neutral: 30, 10%, 96%;
+    --clr-light: 36, 100%, 100%;
+    --clr-1: 218, 100%, 73%;
+    --clr-1--light: 229, 95%, 84%;
+    --clr-2: 18, 100%, 73%;
 
     /*size*/
     --size-xs: 0.25rem;
@@ -42,7 +44,7 @@ img, picture {
 
 input, button, textarea, select {
     font: inherit;
-    color: var(--clr-dark);
+    color: hsl(var(--clr-dark));
     /* width: 0; not working with flex in calc */
 }
 
@@ -77,6 +79,7 @@ button {cursor: pointer;}
 .items--end{align-items: end;}
 
 .gap--s {gap: var(--size-s);}
+.gap--m {gap: var(--size-m);}
 
 .flex__child--full {flex: 1 1 auto;}
 
@@ -94,13 +97,16 @@ button {cursor: pointer;}
 .title--m {
     font-size: 1.5rem;
     line-height: 100%;
-    font-weight: 800;
+    font-weight: 400;
+    font-family: "Luckiest Guy", cursive;
+    font-style: normal;
 }
 
 .title--s {
     font-size: 0.875rem;
     line-height: 1.4286;
-    font-weight: 100;
+    font-weight: 200;
+    color: hsl(var(--clr-dark));
     text-transform: uppercase;
 }
 
@@ -111,32 +117,28 @@ button {cursor: pointer;}
 /* — containers — */
 
 body {
-    background-color: var(--clr-dark);
+    background-color: hsl(var(--clr-neutral), 0.4);
+    background-image: linear-gradient(90deg, transparent 12px, #ffa077 12px, #ffa077 13.5px, transparent 13.5px),linear-gradient(#e6f4ff .1em, transparent .1em);
+    background-size: 100% 1.5em;
     font-family: "Azeret Mono", monospace;
     font-size: 0.875rem;
-    line-height: 1.4286; 
-    color: var(--clr-dark);
-    padding: var(--size-s);
+    line-height: 1.5; 
+    color: hsl(var(--clr-dark));
+    padding: 0 var(--size-m);
 }
 
 .card {
-    background-color: var(--clr-light);
     padding: var(--size-s);
 }
 
 .card--s {
-    position: sticky;
-    top: 0;
-    border-bottom: 0.5px solid var(--clr-dark);
-}
-
-
-.card--m {
-    padding-bottom: var(--size-m);
+  /* position: sticky;
+  top: 0;
+  background-color: hsl(var(--clr-light), 0.6); */
 }
 
 .container {
-    background-color: var(--clr-neutral);
+    background-color: hsl(var(--clr-neutral));
 }
 
 .container--l {
@@ -147,40 +149,38 @@ body {
     padding: var(--size-m);
 }
 
-
 .bottom-extra {margin-bottom: var(--size-l);}
 
 /* — navi — */
 
-.nav__list--hidden {display: none;}
-
 .nav__logo {
+    display: flex;
+    align-items: center;
     display: inline-block;
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: var(--clr-dark);
+    color: hsl(var(--clr-dark));
     text-decoration: none;
-    text-align: center;
+    min-width: var(--size-l);
+    min-height: var(--size-l);
 }
 
 .nav__link {
     display: flex;
     align-items: center;
-    justify-content: end;
     min-height: var(--size-l);
-    color: var(--clr-dark);
-    text-decoration:none;                                          
+    color: hsl(var(--clr-dark));
+    text-decoration: none;                                          
 }
 
 @media (min-width: 700px) {.nav__link {justify-content: center;}}
 
 .nav__link--active {
-    background-color: var(--clr-1);
+    text-decoration: overline wavy 1.2px;
+    text-decoration-color: hsl(var(--clr-1));
 }
 
-.nav__link:hover > span {
-    background-color: var(--clr-1);
-    text-decoration: 1.5px solid underline;
+.nav__link:hover, .nav__logo:hover, .nav__link--active:hover {
+    text-decoration: overline wavy 1.2px;
+    text-decoration-color: hsl(var(--clr-2));
 }
 
 
@@ -188,36 +188,18 @@ body {
 
 .btn--primary {
     display: block;
-    min-height: var(--size-l);
     padding: 0 var(--size-s);
-    color: var(--clr-light);
-    background-color: var(--clr-dark);
-    border: 2px solid var(--clr-dark);
-}
-
-.btn--secondary {
-    display: block;
     min-height: var(--size-l);
-    padding: 0 var(--size-s);
-    background-color: transparent;
-    border: 2px solid var(--clr-dark);
+    color: hsl(var(--clr-dark));
+    border: 2px solid transparent;
+    border-radius: var(--size-m);
+    background-color: hsl(var(--clr-1--light));
 }
 
-.btn--primary:hover, .btn--secondary:hover {
-    text-decoration: 1.5px solid underline;
-    border: 2px solid var(--clr-dark);
+.btn--primary:hover {
+    border: 2px solid hsl(var(--clr-dark));
 }
 
-.btn--icon {
-    width: var(--size-l);
-    height: var(--size-l);
-    border: transparent;
-    background-color: transparent;
-}
-
-.btn--icon:hover {
-    background-color: var(--clr-neutral);
-}
 
 /* — inputs — */
 
@@ -232,8 +214,8 @@ label {
 input, select {
     display: block;
     min-height: var(--size-l);
-    background-color: var(--clr-neutral);
-    border: 2px solid var(--clr-neutral);
+    background-color: hsl(var(--clr-neutral));
+    border: 2px solid hsl(var(--clr-neutral));
 }
 
 input:hover, input:focus, select:hover, select:focus {
@@ -251,7 +233,7 @@ summary {
 
 summary:hover {
     text-decoration: 2px solid underline;
-    background-color: var(--clr-neutral);
+    background-color: hsl(var(--clr-neutral));
 
 }
 
@@ -271,7 +253,7 @@ details[open] summary::marker {
 .dice {
     min-width: 50px;
     min-height: 50px;
-    border: var(--clr-dark) 0.5px solid;
+    border: hsl(var(--clr-dark)) 0.5px solid;
     padding: 12px 0;
     text-justify: center;  
     
@@ -317,29 +299,19 @@ details[open] summary::marker {
     .justify--start--desk {justify-content: start;}
     .justify--center--desk {justify-content: center;}
     .justify--end--desk  {justify-content: end;}
-    .justify--space-between--desk  {justify-content: space-between;}
+    .justify--space-between--desk {justify-content: space-between;}
 
     .items--start--desk {align-items: start;}
     .items--center--desk {align-items: center;}
     .items--end--desk {align-items: end;}
+    
+    .gap--s--desk {gap: var(--size-s);}
 
-    body {
-        padding: var(--size-m);
-    } 
-
-   .nav__list--hidden {display: block;} 
-   .btn--icon {display: none;}
    
-   .card {padding: var(--size-m);}
-   .card--s {
-        min-width: 160px;
-        border-right: 0.5px solid var(--clr-dark);
-        border-bottom: none;
-    }
-    .card--m {
-        max-width: 750px;
-        flex-grow: 2;
-        height: fit-content;
+   .card {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
