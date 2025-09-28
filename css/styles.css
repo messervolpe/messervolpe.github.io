@@ -260,7 +260,7 @@ details[open] summary::marker {
     min-height: 50px;
     border: hsl(var(--clr-dark)) 2px solid;
     padding: 12px 12px 8px;
-    text-justify: center;
+    text-align: center;
     
 }
 
