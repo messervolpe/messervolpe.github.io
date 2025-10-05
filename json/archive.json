@@ -1,12 +1,28 @@
 {
   "months": [
     {
+    "name": "October",
+    "categories": [
+        {
+        "name": "read",
+        "entries": ["The picture of Dorian Gray, Oscar Wilde"]
+        },
+        {
+        "name": "playing",
+        "entries": ["**"]
+        },
+        {
+        "name": "watched",
+        "entries": ["**"]
+        }
+    ]},
+    {
     "name": "September",
     "categories": [
         {
         "name": "read",
         "entries": [
-          "The Wind in the Willows, Kenneth Grahame",
+          "The Wind in the Willows, Kenneth Grahame ✓",
           "Profit over people, Noam Chommsky",
           "Global discontents, Noam Chommsky",
           "Drei Mann in einem Boot, Jerome K. Jerome"

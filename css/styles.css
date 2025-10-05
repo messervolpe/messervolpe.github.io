@@ -97,9 +97,7 @@ button {cursor: pointer;}
 .title--m {
     font-size: 1.2rem;
     line-height: 100%;
-    font-weight: 400;
-    font-family: "Luckiest Guy", cursive;
-    font-style: normal;
+    font-weight: 800;
 }
 
 .title--s {
@@ -118,8 +116,6 @@ button {cursor: pointer;}
 
 body {
     background-color: hsl(var(--clr-neutral), 0.4);
-    background-image: linear-gradient(90deg, transparent 12px, #ffa077 12px, #ffa077 13.5px, transparent 13.5px),linear-gradient(#e6f4ff .1em, transparent .1em);
-    background-size: 100% 1.5em;
     font-family: "Azeret Mono", monospace;
     font-size: 0.875rem;
     line-height: 1.5; 
@@ -131,11 +127,11 @@ body {
     padding: var(--size-s);
 }
 
-.card--s {
+/* .card--s {
   position: sticky;
   top: 0;
-  background-color: hsl(var(--clr-light), 0.6);
-}
+  
+} */
 
 .container {
     background-color: hsl(var(--clr-neutral));
