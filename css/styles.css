@@ -95,14 +95,14 @@ button {cursor: pointer;}
 }
 
 .title--m {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     line-height: 100%;
     font-weight: 800;
 }
 
 .title--s {
     font-size: 0.875rem;
-    line-height: 1.4286;
+    line-height: 140%;
     font-weight: 200;
     color: hsl(var(--clr-dark));
     text-transform: uppercase;
@@ -116,8 +116,8 @@ button {cursor: pointer;}
 
 body {
     background-color: hsl(var(--clr-neutral), 0.4);
-    font-family: "Azeret Mono", monospace;
-    font-size: 0.875rem;
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
     line-height: 1.5; 
     color: hsl(var(--clr-dark));
     padding: 0 var(--size-m);
@@ -163,6 +163,10 @@ body {
     min-height: var(--size-l);
 }
 
+.nav__logo:hover {
+    color: hsl(var(--clr-2));
+}
+
 .nav__link {
     display: flex;
     align-items: center;
@@ -179,7 +183,7 @@ body {
     text-decoration-color: hsl(var(--clr-1));
 }
 
-.nav__link:hover, .nav__logo:hover, .nav__link--active:hover {
+.nav__link:hover, .nav__link--active:hover {
     text-decoration: overline wavy 1.5px;
     text-decoration-color: hsl(var(--clr-2));
 }
@@ -207,7 +211,7 @@ body {
 label {
     display: block;
     margin-bottom: var(--size-xs);
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     line-height: 100%;
     text-transform: uppercase;
 }
@@ -255,9 +259,7 @@ details[open] summary::marker {
     min-width: 50px;
     min-height: 50px;
     border: hsl(var(--clr-dark)) 2px solid;
-    padding: 12px 12px 8px;
-    text-align: center;
-    
+    padding-top: 14px;
 }
 
 
