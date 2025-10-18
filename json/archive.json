@@ -5,7 +5,10 @@
     "categories": [
         {
         "name": "read",
-        "entries": ["The picture of Dorian Gray, Oscar Wilde"]
+        "entries": [
+          "The picture of Dorian Gray, Oscar Wilde  ✓",
+          "Balthazar Jones and the Tower of London Zoo, Julia Stuart  ✓",
+          "Drei Mann in einem Boot, Jerome K. Jerome"]
         },
         {
         "name": "playing",
