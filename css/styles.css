@@ -103,7 +103,7 @@ button {cursor: pointer;}
 .title--s {
     font-size: 0.875rem;
     line-height: 140%;
-    font-weight: 200;
+    font-weight: 300;
     color: hsl(var(--clr-dark));
     text-transform: uppercase;
 }
@@ -244,7 +244,7 @@ summary:hover {
 }
 
 summary::marker {
-    content: "+ "
+    content: "○ "
 }
 
 details div {
@@ -252,7 +252,7 @@ details div {
 }
 
 details[open] summary::marker {
-    content: "- ";
+    content: "● ";
 }
 
 
