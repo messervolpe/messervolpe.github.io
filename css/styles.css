@@ -103,8 +103,8 @@ button {cursor: pointer;}
 .title--s {
     font-size: 0.875rem;
     line-height: 140%;
-    font-weight: 300;
-    color: hsl(var(--clr-dark));
+    font-weight: 400;
+    color: hsl(var(--clr-dark), 0.5);
     text-transform: uppercase;
 }
 
@@ -230,6 +230,7 @@ input:hover, input:focus, select:hover, select:focus {
 
 /* — accordion — */
 
+
 summary {
     cursor: pointer;
     font-size: 1.5rem;
@@ -255,6 +256,7 @@ details[open] summary::marker {
     content: "● ";
 }
 
+/* — dices — */
 
 .dice {
     min-width: 50px;
