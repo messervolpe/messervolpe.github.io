@@ -6,10 +6,11 @@
         {
         "name": "read",
         "entries": [
-          "A Yankee at the court of king Arthur, Mark Twain",
+          "A Yankee at King Arthur's court, Mark Twain",
           "KWDW, Nagoski",
-         "Frauen & Macht, Mary Beard",
-        "Es war schon immer ziemlich kalt, Ela Mayer - DNF"]
+          "Frauen & Macht, Mary Beard",
+          "Es war schon immer ziemlich kalt, Ela Mayer - DNF",
+          "Allegro Pastel, Leif Randt"]
         },
         {
         "name": "playing",
@@ -17,7 +18,11 @@
         },
         {
         "name": "watched",
-        "entries": ["The fellowship of the ring", "The two towers", "The return of the king"]
+        "entries": [
+          "The fellowship of the ring", 
+          "The two towers",
+          "The return of the king",
+          "Arrival"]
         }
     ]},
     {
