@@ -1,6 +1,25 @@
 {
   "months": [
-     {
+    {
+    "name": "December",
+    "categories": [
+        {
+        "name": "read",
+        "entries": [
+          "The Trial, Kafka ",
+          "Exhaliation, Ted Chang (short stories)✓"]
+        },
+        {
+        "name": "playing",
+        "entries": ["**"]
+        },
+        {
+        "name": "watched",
+        "entries": [
+          "The Banshees of Inisherin"]
+        }
+    ]},
+    {
     "name": "November",
     "categories": [
         {

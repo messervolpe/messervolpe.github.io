@@ -26,16 +26,16 @@ fetch('json/archive.json')
 
             if (categoryName == "read") {
                 categoryList +=  `
-                <div class="stack--xs category--month">
+                <div class="stack-xs category--month">
                     <h3 class="heading-3"">${categoryName}</h3>
-                    <ul class="stack--xs">${entryList}</ul>
+                    <ul class="stack-xs">${entryList}</ul>
                 </div>
             `
             } else {
                 categoryList +=  `
-                <div class="stack--xs category-container category--month">
+                <div class="stack-xs category-container category--month">
                     <h3 class="heading-3"">${categoryName}</h3>
-                    <ul class="stack--xs">${entryList}</ul>
+                    <ul class="stack-xs">${entryList}</ul>
                 </div>
             `
             }
@@ -43,12 +43,14 @@ fetch('json/archive.json')
         }
 
         monthList += `
-            <details class="stack--m month-details">
-            <summary>
+            <details class="month-details">
+            <summary class="month-title">
             <svg height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 6)"><path d="m9.5.497 4 4.002-4 4.001"/><path d="m.5 4.5h13"/></g></svg>
             <h2 class="heading-2">${monthName}</h2>
             </summary>
-                <div class="stack--m flex--desk gap--s justify--space-between--desk">${categoryList}</div>
+                <div class="stack-m desk_flex-s">
+                ${categoryList}
+                </div>
             </details>
             `
     }
