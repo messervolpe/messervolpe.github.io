@@ -1,5 +1,29 @@
 {
   "months": [
+        {
+    "name": "January",
+    "categories": [
+        {
+        "name": "read",
+        "entries": [
+        "Moby Dick",
+        "Der verkehrte Himmel, M. Ross (GF)"
+          
+        ]
+        },
+        {
+        "name": "playing",
+        "entries": ["***"]
+        },
+        {
+        "name": "watched",
+        "entries": [
+        "Dune part 1",
+        "Dune part 2",
+        "The departed",
+        "The phantom thread"]
+        }
+    ]},
     {
     "name": "December",
     "categories": [
@@ -12,9 +36,7 @@
           "Exhaliation, Ted Chang (short stories) ✓",
         "L'arpa d'erba, Truman Capote ✓",
         "Moby Dick",
-          "20th Century Boys, Urasawa ✓",
-          "Der verkehrte Himmel, M. Ross (GF)"
-          
+          "20th Century Boys, Urasawa ✓"        
         ]
         },
         {
@@ -28,8 +50,7 @@
         "District 9",
         "Best in show",
         "Principi e principesse",
-        "Azur e Azmar",
-        "The departed"]
+        "Azur e Azmar"]
         }
     ]},
     {

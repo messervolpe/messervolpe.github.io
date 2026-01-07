@@ -157,6 +157,11 @@ main {
         margin-block-start: 0;
     } 
 
+    .desk_grid {display: grid;}
+    .desk_grid > * + * {
+        margin-block-start: 0;
+    } 
+
     .desk_flex-reverse {flex-direction: row-reverse;}
 
     .desk_justify-start {justify-content: start;}
@@ -294,10 +299,8 @@ a:hover, summary:hover {
 label {
     display: block;
     margin-bottom: var(--size-xxs);
-    font-size: 0.75rem;
     line-height: 100%;
-    text-transform: uppercase;
-    font-family: "Manrope", sans-serif;
+    text-transform: lowercase;
     font-weight: 500;   
 }
 
@@ -345,18 +348,12 @@ input:hover, input:focus, select:hover, select:focus {
 }
 
 
-
 @media (min-width: 700px) {
 
-    .category--month {
-        max-width: 400px;
-        min-width: 400px;
+    .category-cont {
+        grid-template-columns: 2fr 1fr 1fr ;
     }
 
-    .category-container {
-        max-width: 250px;
-        min-width: 250px;
-    }
 }
 
 /*
