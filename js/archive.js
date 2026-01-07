@@ -24,22 +24,12 @@ fetch('json/archive.json')
                 entryList += entryItem
             }
 
-            if (categoryName == "read") {
-                categoryList +=  `
+            categoryList +=  `
                 <div class="stack-xs">
                     <h3 class="heading-3"">${categoryName}</h3>
                     <ul class="stack-xs">${entryList}</ul>
                 </div>
-            `
-            } else {
-                categoryList +=  `
-                <div class="stack-xs">
-                    <h3 class="heading-3"">${categoryName}</h3>
-                    <ul class="stack-xs">${entryList}</ul>
-                </div>
-            `
-            }
-          
+                `          
         }
 
         monthList += `
