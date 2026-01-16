@@ -1,6 +1,6 @@
 :root {
     /*colors*/
-    --white: #FAFAF9;
+    --white: hsl(60, 4%, 95%);
     --gray-100: #F3F1EF;
     --gray-400: #4B4B4B;
     --black: #3E3E3E;
@@ -137,11 +137,14 @@ main {
 
 .flex-wrap {flex-wrap: wrap;}
 
+.grid {display: grid;}
+
 .justify-center {justify-content: center;}
 .justify-end {justify-content: end;}
 
 .items-end {align-items: end;}
 .items-start{align-items: start;}
+.items-center{align-items: center;}
 
 @media (min-width: 700px) {
 
@@ -154,6 +157,9 @@ main {
         margin-block-start: 0;
     } 
     .desk_flex-s > * + * {
+        margin-block-start: 0;
+    } 
+    .desk_flex-m > * + * {
         margin-block-start: 0;
     } 
 
@@ -317,9 +323,45 @@ input:hover, input:focus, select:hover, select:focus {
 }
 
 /*
-* === PROMPTS ==
+* === homepage ==
 */
 
+.cont-quickLinks {
+    padding: 1rem;
+    border: var(--blue-300) 2px solid;
+    position: relative;
+    min-width: 200px;
+
+}
+
+.cont-title {
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    color: var(--blue-300);
+    padding: 4px 8px;
+    background-color: var(--bg-light);
+    width: fit-content;
+    position: absolute;
+    top: -1rem;
+    left: 4px;
+
+}
+
+.cont-quickLinks--projects {
+   border: var(--orange-300) 2px solid;
+   flex-grow: 1;
+   
+}
+
+.cont-title--projects {
+    color: var(--orange-300);
+}
+
+
+
+/*
+* === PROMPTS ==
+*/
 
 .prompts--container[open] > summary {
     margin-bottom: 2rem;
@@ -364,24 +406,6 @@ input:hover, input:focus, select:hover, select:focus {
     margin-bottom: 2rem;
 }
 
-
-
-.img-hover-test {
-    width: 400px;
-    height: 400px;
-    background-image: url("../graphics/photo1.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-
-.link2:hover ~ .img-hover-test {
-    background-image: url("../graphics/photo2.jpg");
-}
-
-.link1:hover ~ .img-hover-test {
-    background-image: url("../graphics/photo3.jpg");
-}
 
 
 /* .ch1, .ch2, .ch3, .ch4, .ch5 {width: fit-content;} */
