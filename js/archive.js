@@ -6,7 +6,8 @@ let monthList = ""
 
 fetch('json/archive.json')
 .then(response => response.json())
-.then(data => {document.querySelector(".js-arc-list")
+.then(data => {
+    document.querySelector(".js-arc-list")
     console.log("full data:", data);
 
     for (let month of data.months) {
