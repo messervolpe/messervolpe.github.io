@@ -1,5 +1,28 @@
 {
   "months": [
+    {
+    "name": "February",
+    "categories": [
+        {
+        "name": "reading",
+        "entries": [
+        "Robinson Crusoe, Daniel Defoe",
+        "Bread of Angels, Patti Smith",
+        "Ein falshes Wort, Vigdis Hjorth"
+        ]
+        },
+        {
+        "name": "playing",
+        "entries": ["***"]
+        },
+        {
+        "name": "watched",
+        "entries": [
+        "***"]
+        }
+    ]
+
+    },
         {
     "name": "January",
     "categories": [
@@ -9,8 +32,8 @@
         "Moby Dick",
         "Der verkehrte Himmel, M. Ross (GN) ✓",
         "Amulet, Roberto Bolaño ✓",
-        "Bone (GN)"
-          
+        "Bone (GN)",
+        "Robinson Crusoe, Daniel Defoe"
         ]
         },
         {
@@ -24,10 +47,10 @@
         "Dune part 2",
         "The departed",
         "The phantom thread",
-          "A knight's tale",
-      "Rikle - arte Doku",
-      "Thomas Mann - arte Doku",
-    "Kandinsky - arte Doku"]
+        "A knight's tale",
+        "Rikle - arte Doku",
+        "Thomas Mann - arte Doku",
+        "Kandinsky - arte Doku"]
         }
     ]},
     {
