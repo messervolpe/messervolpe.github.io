@@ -1,5 +1,28 @@
 {
   "months": [
+        {
+    "name": "March",
+    "categories": [
+        {
+        "name": "reading",
+        "entries": [
+        "A Memory Called Empire, Arkady Martine",
+        "Dracula, Bram Stoker",
+        "A Desolation called Peace, Arkady Martine",
+        "Solaris, S. Lem"
+        ]
+        },
+        {
+        "name": "playing",
+        "entries": ["Peak"]
+        },
+        {
+        "name": "watched",
+        "entries": [
+        "Martin Supreme"]
+        }
+    ]
+    },
     {
     "name": "February",
     "categories": [
@@ -9,13 +32,13 @@
         "Robinson Crusoe, Daniel Defoe",
         "Bread of Angels, Patti Smith",
         "Ein falshes Wort, Vigdis Hjorth",
-          "I feel bad about my neck, Nora Ephron", 
-          "A Memory Called Empire, Arkady Martine"
+        "I feel bad about my neck, Nora Ephron", 
+        "A Memory Called Empire, Arkady Martine"
         ]
         },
         {
         "name": "playing",
-        "entries": ["***"]
+        "entries": ["Peak"]
         },
         {
         "name": "watched",
@@ -23,7 +46,6 @@
         "Mulholland Drive", "The wolf of Wallstreet"]
         }
     ]
-
     },
         {
     "name": "January",
